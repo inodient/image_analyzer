@@ -1,84 +1,341 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+	
+	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+	<meta charset="utf-8">
+	<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<link rel="stylesheet" href="/image.css">
+	<style>
 
-<title>Analyze Images</title>
+		body {
+			
+		}
 
+
+		.content-header {
+			padding: 10px;
+			font-size: 1.25rem;
+			text-align: center;
+			color: white;
+			background-color: #328893;
+		}
+
+		.content-header .row {
+			margin: auto;
+			max-width: 1000px;
+		}
+
+		.content-header .left-nav {
+			padding-left: 0;
+			text-align: left;
+		}
+
+		.content-header .right-nav {
+			padding-right: 0;
+			text-align: right;
+		}
+
+		.content-header a {
+			font-size: 1.25rem;
+			color: white;
+			text-decoration: none;
+		}
+
+		.content-header a:hover {
+			font-weight: 700;
+			text-decoration: none;
+		}		
+
+		.failure-form {
+			max-width: 1000px;
+			margin-left: auto;
+			margin-right: auto;
+			background-color: white;
+			margin-top: 80px;
+		}
+
+		.failure-form .assign-button-group {
+			text-align: right;
+			margin-bottom: 20px;
+		}
+
+		.failure-form .assign-button-group input[type=button] {
+			background-color: #296f79;
+			border: 0;
+			outline: none;
+			color: white;
+			font-size: 1.25rem;
+			font-weight: 700;
+			padding: 8px;
+			border-radius: 0;
+		}
+
+		.failure-form .assign-button-group input[type=button]:hover {
+			background-color: #5b949b;
+		}
+
+		.failure-form table {
+			font-size: 1.1rem;
+		}
+
+		.failure-form table .td-title {
+			width: 20%;
+			vertical-align: middle;
+			text-align: center;
+			font-weight: bold;
+			padding: 6px 12px 6px 12px;
+			height: 34px;
+			background-color: #f3f8f8;
+		}
+		.failure-form table .td-content {
+			width: 30%;
+			vertical-align: middle;
+			text-align: center;
+			font-weight: bold;
+			height: 34px;
+		}
+
+		.failure-form table input {
+			padding: 6px 12px 6px 12px;
+			height: 34px;
+			border: 1px solid lightgray;
+			width: 100%;
+			border-radius: 0 !important;
+			-webkit-appearance: none;
+		}
+
+		.failure-form table .model-selector {
+			padding: 6px 12px 6px 12px;
+			height: 34px;
+			border: 1px solid lightgray;
+			width: 100%;
+			border-radius: 0 !important;
+		}
+
+		.failure-form img {
+			width: 100%;
+		}
+
+		.failure-form textarea {
+			padding: 6px 12px 6px 12px;
+			border: 1px solid lightgray;
+			width: 100%;
+			border-radius: 0 !important;
+			-webkit-appearance: none;
+		}
+
+		footer {
+			padding: 30px;
+			font-size: 1.25rem;
+			text-align: center;
+			color: white;
+			background-color: #328893;
+		}
+
+		.navbar-toggle {
+			border: 1px solid #328893;
+			padding: 4px;
+			margin-right: 0px;
+		}
+
+		.icon-bar {
+			background-color: white;
+		}
+
+		.navbar-item a {
+			text-decoration: none;
+			color: #04313a;
+		}
+
+		.navbar-item.active {
+			font-weight: 800;
+		}
+
+	
+	</style>
+
+	<script>
+		$(document).ready( function(){
+
+
+			// Login Session Check - Start
+    		var loginCheck = {
+    			type: "POST",
+    			url: "/authcheck",
+    			data: null,
+
+    			success: function(results){
+    				if( results && results === "E" ){
+    					alert( "You must login this system for assigning failures." );
+    					$(location).attr( "href", "/" );
+    				}
+    			},
+    			error: function(error){
+    				alert( "An error occured.\nPlease contact administrator." );
+    			}
+    		}
+
+    		$.ajax( loginCheck );
+    		// Login Session Check - End
+
+
+			
+			$("#btn-list").on( "click", function(){
+				$(location).attr( "href", "/list" );
+			} );
+
+			$("#btn-del").on( "click", function(){
+				if( confirm( "Are you sure to want to delete this failure?") ){
+		    		var targetId = $(this).data( "failure-id");
+
+			    	var opt = {
+						type: "POST",
+						url: "/delfailure",
+						data: {targetId : targetId},
+
+						success: function( data ){
+							$(location).attr( "href", "/list" );
+						},
+						error: function(){
+							alert( "An error occured.\nPlease contact administrator." );
+						}
+					}
+
+					$.ajax( opt );
+		    	}
+			} );
+
+			$("#sign-out").on( "click", function(){
+		    	$(location).attr( "href", "/" );
+		    } );
+		} );
+	</script>
+
+	<title>RGT MOBILE</title>
 </head>
-
 <body>
-	<div class="doc">
-		<header class="navbar navbar-inverse navbar-fixed-top">
-			<div class="navbar-container"
-				style="max-width: 1000px; margin-left: auto; margin-right: auto;">
-				<div class="navbar-header">
-					<button type="button" style="margin-left: 10px"
-						class="pull-left navbar-toggle" data-toggle="collapse"
-						data-target="#top_menu">
-						<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-							class="icon-bar"></span>
-					</button>
-					<a href="/" class="navbar-brand mobile-navbar-brand mobile-show">Image Analyzer</a>
-					<a id="download" class="mobile-show" href="/"><i
-						class="fa fa-facebook fa-lg logo"></i></a>
-				</div>
-			</div>
-			<div class="collapse navbar-collapse navbar-content" id="top_menu"
-				style="max-width: 1000px; margin-left: auto; margin-right: auto;">
-				<ul class="nav navbar-nav top-nav">
-					<li id="0" class=""><a href="/">DashBoard</a></li>
-					<li id="1" class="active"><a href="/analyzing">Analyzing</a></li>
-					<li id="30"class=""><a href="/std">Standard</a></li>
-					<li id="30"class=""><a href="/report">Report</a></li>
-					<li id="30"class=""><a href="/history">History</a></li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right top-nav">
-					<!-- <li style="padding-right: 15px" id="35" name="facebook" class=""><a href="window.open('https://www.facebook.com/dialog/feed?app_id=755383531310577&amp;display=popup&amp;caption=An%20example%20caption&amp;link=http://imgnews.naver.net/image/076/2017/10/18/2017101901001253400099581_20171018133052141.jpg?type=w540&amp;redirect_uri=http://localhost:3000/template', '', 'top=250,left=250,width=1000,height=400' );"><i class="fa fa-facebook fa-lg"></i>&nbsp;&nbsp;Facebook</a></li> -->
-				</ul>
-			</div>
-		</header>
-	
-		<div class="page-content">
+	<!-- <div class="content-header">
+		<div class="row">
 			<div class="container-fluid">
-				<div class="row">
-					<div class="small-section-end"></div>
-					<h2>Basic Image Information</h2>
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 left-nav">
+					<a href="/list"><span class="glyphicon glyphicon-menu-left	
+"></span>&nbsp;&nbsp;LIST</a>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+					<a href="">FAILURE</a>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 right-nav">
+					<a href="/">LOGOUT&nbsp;&nbsp;<span class="glyphicon glyphicon-menu-right	
+"></span></a>
 				</div>
 			</div>
 		</div>
-	</div>
-	
-	<footer style="background-color: black">
-		<div class="jumbotron footer-background">
-			<div class="footer-heading">
-				<h2 class="title">Image Analyzer</h2>
-				<div class="description">Image Analyzing For maintaining machines</div>
-			</div>
+	</div> -->
 
-			<div class="footer-footer">
-				<hr class="color-weaken">
-				<p class="copyright">
-					Copyright(c) 2018 KANGCHANGHO <br> Created and Maintained by <br
-						class="mobile-show"> <a
-						href="mailto:inodient@gmail.com?subject=KANGCHANGHO.COM - OPINITON">Ino
-						Kang [Changho Kang]</a>. <br> <br> This work is using <a
-						href="javascript:getLicenseInfo()">Open Source Projects</a><br
-						class="mobile-show"> and licensed under a <a
-						href="javascript:getLicenseInfo()">MIT License</a>.
-				</p>
-			</div>
+	<nav class="navbar navbar-fixed-top" style="background-color: #328893">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="float: left; margin-left: 8px">
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span> 
+	      </button>
+	      <button type="button" class="navbar-toggle" id="sign-out" style="color: white; float:right; margin-right: 8px">
+            Sign Out&nbsp;&nbsp;<span class="glyphicon glyphicon-log-out"></span>
+    		</button>
+	    </div>
+	    <div class="collapse navbar-collapse" id="myNavbar" style="background-color: white; color: #04313a">
+	      <ul class="nav navbar-nav">
+	        <li class="navbar-item"><a href="/list" class="site-nav-menu" id="1" name="List" data-href="/list">List</a></li>
+          	<li class="navbar-item"><a href="/assign" class="site-nav-menu" id="1" name="Assign Failure" data-href="/assign">Assign Failure</a></li>
+          	<li class="navbar-item"><a href="/machine" class="site-nav-menu" id="1" name="Machine Info" data-href="/machine">Machine Info</a></li>
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	      	<li class="navbar-item"><a href="/setting" class="site-nav-menu" id="1" name="Setting" data-href="/setting">Setting</a></li>
+	        <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
 
+	<form id="failure-form" class="failure-form" name="failure-form" method="post" action="/savefailure
+	" data-failure-id="<%- failure.ID %>">
+		
+		<div class="container-fluid">
+			<table class="table table-responsive table-bordered" style="margin-bottom: 35px">
+				<tbody>
+					<tr>
+						<td class="td-title">NAME</td>
+						<td colspan=3 class="td-content">
+							<span><%- failure.NAME %></span>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="td-title">MODEL ID</td>
+						<td class="td-content">
+							<span><%- failure.NAME %></span>
+						</td>
+						<td class="td-title">PRJ NO</td>
+						<td class="td-content">
+							<span><%- failure.PRJ %></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="td-title">PHASE</td>
+						<td class="td-content">
+							<span><%- failure.PHASE %></span>
+						</td>
+						<td class="td-title">SERIAL</td>
+						<td class="td-content">
+							<span><%- failure.SERIAL %></span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table class="table table-responsive table-bordered">
+				<tbody>
+					<tr>
+						<td class="td-title">IMAGE</td>
+					</tr>
+					<tr>
+						<td>
+							<img src="<%- '/' + failure.SAVEDFILENAME %>" id="failure-image">
+						</td>
+					</tr>
+					<tr>
+						<td class="td-title">FAILURE CONTENT</td>
+					</tr>
+					<tr>
+						<td>
+							<span><%- failure.FAILURE %></span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
-	</footer>
 
+		<div class="container-fluid assign-button-group" style="text-align:center">
+			<input style="width: 48%" type="button" value="DELETE" id="btn-del" data-failure-id="<%- failure.ID %>" />
+			<input style="width: 48%" type="button" value="BACK TO LIST" id="btn-list" />
+		</div>
+	</form>
+
+	<footer>
+		<p>
+			Copyright(c) 2018 Doosan Information Communication<br>
+			Beta-Test Version - v.0.0.1
+		</p>
+	</footer>
+	
 </body>
 </html>

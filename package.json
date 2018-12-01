@@ -9,6 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "get-pixels": "^3.3.2",
+    "gm": "^1.23.1",
+    "jimp": "^0.6.0",
+    "rgb-color": "^2.1.2",
     "summer-mvc": "^2.1.5"
   }
 }

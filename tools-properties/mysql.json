@@ -5,6 +5,6 @@
   "password" : "123Qwer@",
   "database" : "ImageAnalyzer",
   "queries" : [
-  	"/tools-submodules-dev/db/queries/query.xml"
+  	"/tools-submodules/db/queries/query.xml"
   ]
 }

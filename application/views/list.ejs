@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+
+
+	
+
+	<link rel="stylesheet" href="/image.css">
+
+	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+	<meta charset="utf-8">
+	<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<script>
+    	$(document).ready( function(){
+
+    		$('.navbar-toggle').click(function(e) {
+		      e.preventDefault();
+		      $('.site-nav').slideToggle(180, "linear");
+		    });
+
+		    $("#sign-out").on( "click", function(){
+		    	$(location).attr( "href", "/" );
+		    } );
+
+		    $(".btn-del").on( "click", function(){
+
+		    	if( confirm( "Are you sure to want to delete this failure?") ){
+		    		var targetId = $(this).data( "id");
+			    	var opt = {
+						type: "POST",
+						url: "/delfailure",
+						data: {targetId : targetId},
+
+						success: function( data ){
+							alert( "Deletion Failure Completed..." );
+
+							var articleId = "article_" + targetId;
+							$("#" + articleId).css( "display", "none" );
+
+						},
+						error: function(){
+							alert( "An error occured.\nPlease contact administrator." );
+						}
+					}
+
+					$.ajax( opt );
+		    	}
+		    } );
+    	} );
+    </script>
+
+
+
+	<title>RGT MOBILE</title>
+</head>
+<body>
+	<nav class="navbar navbar-fixed-top" style="background-color: black">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="float: left; margin-left: 8px">
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span> 
+	      </button>
+	      <button type="button" class="navbar-toggle" id="sign-out" style="color: white; float:right; margin-right: 8px">
+            Sign Out&nbsp;&nbsp;<span class="glyphicon glyphicon-log-out"></span>
+    		</button>
+	    </div>
+	    <div class="collapse navbar-collapse" id="myNavbar" style="background-color: white; color: #04313a">
+	      <ul class="nav navbar-nav">
+	        <li class="navbar-item active"><a href="/list" class="site-nav-menu" id="1" name="List" data-href="/list">List</a></li>
+          	<li class="navbar-item"><a href="/assign" class="site-nav-menu" id="1" name="Assign Failure" data-href="/analyzing">Analyze</a></li>
+          	<li class="navbar-item"><a href="/machine" class="site-nav-menu" id="1" name="Machine Info" data-href="/machine">Machine Info</a></li>
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	      	<li class="navbar-item"><a href="/setting" class="site-nav-menu" id="1" name="Setting" data-href="/setting">Setting</a></li>
+	        <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+
+
+		<div class="container-fluid">
+			
+
+			<div class="row content-body">
+
+				<% for( var i=0; i<list.length; i++ ){ %>
+
+					<article id="article_68" data-article-id="68">
+						
+						<table class="table table-responsive">
+							<tbody>
+
+
+									<tr><td><img src="<%- '/'+list[i].savedFileName %>" style="width: 100%"></td></tr>
+
+									<tr style="font-size: 1.25rem;">
+										<td>
+											<span class="before-line"><%- (list[i].CREATED_DATE) %></span>
+										</td>
+									</tr>
+									<tr style="font-size: 2rem; font-weight: bold">
+										<td><%- list[i].TITLE %></td>
+									</tr>
+									<tr style="font-size: 1.5rem; line-height: 2.5rem">
+										<td><%- list[i].DESCRIPTION %></td>
+									</tr>
+							</tbody>
+						</table>
+
+						
+
+
+						<div style="margin-top: 30px;">
+							<a class="btn-view" href="/failure/68">SPECIFIC</a>
+							<a class="btn-view btn-del" id="delete_failure_68" data-id="68">DELETE</a>
+						</div>
+
+
+
+					</article>
+
+				<% } %>
+
+			</div>
+
+			<div class="row content-footer footer" style="text-align:center; padding-top:2rem">
+				<div>
+					<p style="font-size: 1.5rem;" >
+						Copyright(c) 2018 Doosan I&C<br>
+						Beta-Test Version - v.0.0.1
+					</p>
+				</div>
+			</div>
+
+		</div>
+
+	
+</body>
+</html>

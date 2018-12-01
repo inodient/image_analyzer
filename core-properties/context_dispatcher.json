@@ -1,12 +1,36 @@
 {
     "GET": [
         {
-            "id": "index",
+            "id": "dsahboard",
             "path": "/",
             "controllerJS": "controller_basic.js",
             "controlFunction": "control",
             "viewPath": "",
-            "view": "index.ejs"
+            "view": "dashboard.ejs"
+        },
+        {
+            "id": "list",
+            "path": "/list",
+            "controllerJS": "controller_analyzing.js",
+            "controlFunction": "control_list",
+            "viewPath": "",
+            "view": "list.ejs"
+        },
+        {
+            "id": "report",
+            "path": "/report",
+            "controllerJS": "controller_analyzing.js",
+            "controlFunction": "control_list",
+            "viewPath": "",
+            "view": "report.ejs"
+        },
+        {
+            "id": "analyzing",
+            "path": "/analyzing",
+            "controllerJS": "controller_basic.js",
+            "controlFunction": "control",
+            "viewPath": "",
+            "view": "analyzing.ejs"
         },
         {
             "id": "ajaxRequest",
@@ -106,6 +130,22 @@
             "controlFunction": "control",
             "viewPath": "",
             "view": ""   
+        },
+        {
+            "id": "uploadimage",
+            "path": "/uploadimage",
+            "controllerJS": "controller_write.js",
+            "controlFunction": "control_upload_image",
+            "viewPath": "",
+            "view": ""
+        },
+        {
+            "id": "execute",
+            "path": "/execute",
+            "controllerJS": "controller_analyzing.js",
+            "controlFunction": "control_analyzing",
+            "viewPath": "",
+            "view": "list.ejs"
         }
     ]
 }

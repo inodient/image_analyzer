@@ -151,7 +151,7 @@
   		]
   	}
   ],
-  "static_folders" : [ "/static", "/static/upload", "/static/img",
+  "static_folders" : [ "/static", "/static/upload", "/static/img", "/upload/template/image",
     {
       "url" : "/image",
       "path" : "/static/image/urls"

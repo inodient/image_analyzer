@@ -1,12 +1,203 @@
 <?xml version='1.0'?>
 <queries>
-  <query id='getMySqlVersion'>
-    select version()
+  <query id='getUserInfo'>
+    <![CDATA[
+      SELECT USER_ID
+            ,USER_NM
+            ,LANG_CD
+            ,EN_FIRST_NM
+            ,EN_LAST_NM
+            ,EMAIL
+            ,DEPT_CD
+            ,DEPT_NM
+            ,TITLE_CD
+            ,TITLE
+            ,DUTY_CD
+            ,DUTY_NM
+            ,COMPANY_CD
+            ,COMPANY_NM
+            ,COM_CD
+            ,COM_PART
+            ,OFFICE_PHONE_NO
+            ,MOBILE_NO
+            ,JOB_GROUP_CD
+            ,EMPLOYEE_NO
+            ,UPDATE_STATE
+            ,MAIN_JOB
+            ,BIRTHDAY
+            ,DEFAULT_BG_CD
+            ,LOCK_YN
+            ,INTERFACE_YN
+            ,CHINESE_NM
+            ,CREATION_USER_ID
+            ,CREATION_DATE
+            ,LAST_UPDATE_USER_ID
+            ,LAST_UPDATE_DATE
+            ,SUBCONTRACTOR_OID
+            ,USE_YN
+            ,EXTRNL_USER_PSWD
+            ,BIRTHDAY_SL
+        FROM TB_COM_USER
+        WHERE USER_ID = #EMP_NO#
+    ]]>
   </query>
+  
+  <query id="getModelList">
+    <![CDATA[
+      select top 20 
+             A.MODEL_ID AS ID, 
+             A.MODEL_NM AS NAME, 
+             A.PROJECT_NO AS PRJ, 
+             B.PLAN_STEP AS PHASE, 
+             B.PLAN_SERIAL AS SERIAL 
+          from TB_RGT_MODEL_MST A, TB_RGT_PLAN B
+         where A.MODEL_ID = B.MODEL_ID
+         order by A.CREATION_DATE desc;
+    ]]>
+  </query>
+
+  <query id="getModelInfoList">
+    <![CDATA[
+      select 
+             A.MODEL_ID AS ID, 
+             A.MODEL_NM AS NAME, 
+             A.PROJECT_NO AS PRJ, 
+             B.PLAN_STEP AS PHASE, 
+             B.PLAN_SERIAL AS SERIAL 
+          from TB_RGT_MODEL_MST A, TB_RGT_PLAN B
+         where A.MODEL_ID = B.MODEL_ID
+         order by A.CREATION_DATE desc;
+    ]]>
+  </query>
+
+  <query id='insertImageInfo'>
+    <![CDATA[
+      INSERT INTO TB_OIL_IMAGE
+             (originalFileName
+             ,savedFileName
+             ,savedPath
+             )
+       VALUES
+             ( #ORGFILE#, #SAVEDFILE#, #PATH# )
+    ]]>
+  </query>
+
+
+
+
+
+  <query id='insertContents'>
+    <![CDATA[
+      insert into TB_HISTORY
+        ( title, image_id, description, created_date )
+      values
+        ( #TITLE#,
+          (select max(id) from TB_OIL_IMAGE where originalFileName like #IMAGE#), 
+          #DESCRIPTION#,
+          NOW()
+        )
+    ]]>
+  </query>
+
+  <query id='getRealImageName'>
+    <![CDATA[
+      select savedFileName from TB_OIL_IMAGE where originalFileName like #IMAGE#
+    ]]>
+  </query>
+
+  <query id='getList'>
+    <![CDATA[
+      SELECT A.id, 
+             A.TITLE, 
+             A.MACHINE_MODEL, 
+             A.IMAGE_ID, 
+             A.OIL_NAME, 
+             A.OWNER, 
+             A.DESCRIPTION, 
+             A.RED_VALUE, 
+             A.BLUE_VALUE, 
+             A.GREEN_VALUE, 
+             A.RED_FWHM, 
+             A.BLUE_FWHM, 
+             A.GREEN_FWHM, 
+             A.DECISION, 
+             A.OPINION, 
+             A.CREATED_DATE,
+             B.originalFileName,
+             B.savedFileName
+        FROM TB_HISTORY A, TB_OIL_IMAGE B 
+        WHERE A.IMAGE_ID = B.ID
+        ORDER BY id DESC
+        LIMIT 20
+    ]]>
+  </query>
+
+
+
+
+
+
+
+  <query id='getFailure'>
+    <![CDATA[
+      select C.ID
+            ,C.FAILURE
+            ,C.CREATE_DATE
+            ,A.MODEL_ID AS MODEL_ID 
+            ,A.MODEL_NM AS NAME 
+            ,A.PROJECT_NO AS PRJ 
+            ,B.PLAN_STEP AS PHASE 
+            ,B.PLAN_SERIAL AS SERIAL 
+            ,D.ORIGINALFILENAME
+            ,D.SAVEDFILENAME
+            ,D.SAVEDPATH
+        from TB_RGT_MODEL_MST A, TB_RGT_PLAN B, TB_RGT_MOBILE_FAILURE C, TB_RGT_MOBILE_IMAGE D
+       where C.MODEL_ID = A.MODEL_ID 
+         and A.MODEL_ID = B.MODEL_ID
+         and C.IMAGE_ID = D.ID
+         and C.ID = #ID#
+    ]]>
+  </query>
+
+  <query id='deleteFailure'>
+    <![CDATA[
+      delete from TB_RGT_MOBILE_FAILURE
+      where ID = #ID#
+    ]]>
+  </query>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <query id='getAccessLog'>
     <![CDATA[
-      select * from connectionInfo 
-      where connectionTime > #STARTDATE# and connectionTime < #ENDDATE#
+      
+      SELECT [id]
+            ,[model_id]
+            ,[image_id]
+            ,[failure]
+            ,[create_date]
+        FROM [dbo].[TB_RGT_MOBILE_FAILURE]
     ]]>
   </query>
   <query id='insertAccessLog'>

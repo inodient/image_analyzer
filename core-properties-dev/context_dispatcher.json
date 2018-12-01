@@ -150,6 +150,14 @@
             "controlFunction": "control",
             "viewPath": "",
             "view": ""   
+        },
+        {
+            "id": "uploadimage",
+            "path": "/uploadimage",
+            "controllerJS": "controller_write.js",
+            "controlFunction": "control_upload_image",
+            "viewPath": "",
+            "view": ""
         }
     ]
 }

@@ -1,273 +1,163 @@
-<!DOCTYPE HTML>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-	  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	  <meta charset="utf-8">
+<title>Image Analyzer</title>
 
-	  <style>
-	  	.jumbotron{
-	  		padding: 25px 25px;
-	  		background-color: black;
-	  		color: lightgray;
-	  	}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
 
-	  	.test_table{
-	  		margin-bottom: 0px;
-	  	}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.min.css">
 
-	  	.test_table tbody tr td{
-	  		border: 0px;
-	  	}
+<link rel="stylesheet" href="/image.css">
 
-	  	.input-group{
-	  		width: 100%;
-	  	}
+<script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@1.6.0/src/loadingoverlay.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@1.6.0/extras/loadingoverlay_progress/loadingoverlay_progress.min.js"></script>
 
-	  	.query_select{
-	  		width: 100%;
-	  	}
+<script src="submodule.js"></script>
 
-	  	.site-footer-container {
-	  		padding: 100px;
-	  	}
-
-	  </style>
-
-	  <script type="text/javascript">
-
-	  	$(document).ready( function(){
-	  		$("#ajax_request").on( "click", function(){
-	  		  var queryText = $("#ajaxMessage").val();
-
-          $.get( "/ajaxRequest?text=" + queryText, function(data, status){
-            $("#message").text( data.text.toString() );
-          } );
-	      } );
-
-				$("#queryId").on( "change", function(){
-					$("#selectedQueryId").val( this.value );
-				} );
-
-	      $(function() {
-		  // We can attach the `fileselect` event to all file inputs on the page
-		  $(document).on('change', ':file', function() {
-		    var input = $(this),
-		        numFiles = input.get(0).files ? input.get(0).files.length : 1,
-		        label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
-		    input.trigger('fileselect', [numFiles, label]);
-		  });
-
-		  // We can watch for our custom `fileselect` event like this
-		  $(document).ready( function() {
-		      $(':file').on('fileselect', function(event, numFiles, label) {
-
-		          var input = $(this).parents('.input-group').find(':text'),
-		              log = numFiles > 1 ? numFiles + ' files selected' : label;
-
-		          if( input.length ) {
-		              input.val(log);
-									$("#uploadForm").submit();
-		          } else {
-		              if( log ) alert(log);
-		          }
-
-		      });
-		  });
-
-		});
-
-
-	  	} );
-	  </script>
-
-	  <title>Welcome summer-mvc</title>
 </head>
 <body>
-	<div class="jumbotron text-center">
-		<h1>Welcome summer-mvc</h1>
-		<p>Very Light Web Application <b>Framework & SDK</b> for Nodejs</p>
-	</div>
-	<div class="container-fluid" style="font-size:15px">
+	<header class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-container"
+			style="max-width: 1000px; margin-left: auto; margin-right: auto;">
+			<div class="navbar-header">
+				<button type="button" style="margin-left: 10px"
+					class="pull-left navbar-toggle" data-toggle="collapse"
+					data-target="#top_menu">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a href="/" class="navbar-brand mobile-navbar-brand mobile-show">IMAGE</a>
+				<a id="download" class="mobile-show" href="/"><i
+					class="fa fa-facebook fa-lg logo"></i></a>
+			</div>
+		</div>
+		<div class="collapse navbar-collapse navbar-content" id="top_menu"
+			style="max-width: 1000px; margin-left: auto; margin-right: auto;">
+			<ul class="nav navbar-nav top-nav">
+
+				<li id="0" name="summermvc" class="active"><a href="/">IMAGE</a></li>
+
+				<li id="1" name="gettingstarted" class=""><a
+					href="/doc/getting-started">Analyze</a></li>
+
+				<!--           <li id="25" name="advancedtopic" class=""><a href="/doc/advanced-topic">History</a></li>
+ -->
+				<li id="30" name="information" class=""><a
+					href="/doc/information">Information</a></li>
+
+			</ul>
+			<ul class="nav navbar-nav navbar-right top-nav">
+
+				<!-- <li style="padding-right: 15px" id="35" name="facebook" class=""><a href="window.open('https://www.facebook.com/dialog/feed?app_id=755383531310577&amp;display=popup&amp;caption=An%20example%20caption&amp;link=http://imgnews.naver.net/image/076/2017/10/18/2017101901001253400099581_20171018133052141.jpg?type=w540&amp;redirect_uri=http://localhost:3000/template', '', 'top=250,left=250,width=1000,height=400' );"><i class="fa fa-facebook fa-lg"></i>&nbsp;&nbsp;Facebook</a></li> -->
+			</ul>
+		</div>
+	</header>
+
+
+	<!-- <div class="container-fluid" style="padding-top: 60px">
+		<div class="row" style="max-width: 1000px; margin-left: auto; margin-right: auto; margin-bottom:50px">
+			<div class="col-md-12">
+				<h2>Basic Information</h2>
+			</div>
+			
+			<div class="col-md-6">
+				<img style="width: 100%" src="/upload/1377559307007.jpg"></img>
+			</div>
+			
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="inp-title"><h4>Title</h4></label> 
+					<input type="text" class="form-control" id="inp-title" />
+				</div>
+				<form class="form-group" id="uploadForm" >
+					<label for="inp-image"><h4>Image</h4></label> 
+					<input type="file" class="form-control" id="inp-image" />
+				</form>
+				<div>
+					<button class="btn_important">Analyze</button>
+				</div>
+			</div>
+			
+			<div class="col-md-12">
+				<hr>
+			</div>
+		</div>
+	</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="container-fluid">
 		<div class="row">
-			<div class="col-lg-1 col-md-1 col-sm-1"></div>
-
-			<div class="col-lg-5 col-md-5 col-sm-5">
-				<h3>Test</h3>
-				<hr>
-				<div class="table-responsive">
-					<table class="table test_table">
-						<tbody>
-							<tr>
-								<td class="col-lg-3 col-md-3 col-sm-3">Post Request</td>
-								<td>
-									<form class="form-inline" action="/" method="post">
-										<div class="input-group">
-											<input type="input" class="form-control" name="postMessage" placeholder="Post Message" />
-											<div class="input-group-btn">
-												<button type="submit" class="btn btn-default">Send</button>
-											</div>
-										</div>
-									</form>
-								</td>
-							</tr>
-							<tr>
-								<td class="col-lg-3 col-md-3 col-sm-3">Ajax Request</td>
-								<td>
-										<div class="input-group">
-											<input type="input" class="form-control" id="ajaxMessage" placeholder="Ajax Message" required />
-											<div class="input-group-btn">
-												<button type="submit" class="btn btn-default" id="ajax_request">Send</button>
-											</div>
-										</div>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<hr>
-				<div class="table-responsive">
-					<table class="table test_table">
-						<tbody>
-							<tr>
-								<td class="col-lg-3 col-md-3 col-sm-3">Cookie</td>
-								<td>
-									<form class="form-inline" action="/setCookie" method="get">
-										<div class="input-group">
-											<input style="width:50%" class="form-control" name="cookieKey" placeholder="key" required />
-											<input style="width:50%" class="form-control" name="cookieValue" placeholder="value" required />
-											<div class="input-group-btn">
-												<button class="btn btn-default">Set</button>
-											</div>
-										</div>
-									</form>
-								</td>
-							</tr>
-							<tr>
-								<td class="col-lg-3 col-md-3 col-sm-3">Session</td>
-								<td>
-									<form class="form-inline" action="/setSession" method="get">
-										<div class="input-group">
-											<input style="width:50%" class="form-control" name="sessionKey" placeholder="key" required />
-											<input style="width:50%" class="form-control" name="sessionValue" placeholder="value" required />
-											<div class="input-group-btn">
-												<button class="btn btn-default">Set</button>
-											</div>
-										</div>
-									</form>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<hr>
-				<div class="table-responsive">
-					<table class="table test_table">
-						<tbody>
-							<tr>
-								<td class="col-lg-3 col-md-3 col-sm-3">DB</td>
-								<td>
-									<form class="form-inline" action="/getData" method="get">
-										<select class="form-control query_select" id="queryId">
-											<% for( var i=0; i<queries.length; i++ ){ %>
-												<option value=<%= queries[i].$.id %> ><%= queries[i].$.id %></option>
-											<% } %>
-										</select>
-										<input id="selectedQueryId" name="selectedQueryId" type="text" value=<%= queries[0].$.id %> hidden />
-										<button class="btn btn-default">Run</button>
-									</form>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<hr>
-				<div class="table-responsive">
-					<table class="table test_table">
-						<tbody>
-							<tr>
-								<td class="col-lg-3 col-md-3 col-sm-3">File Upload</td>
-								<td>
-									<form id="uploadForm" class="form-inline" action="/upload" method="post" enctype="multipart/form-data">
-										<div class="input-group">
-											<input type="text" class="form-control" readonly>
-			                <label class="input-group-btn">
-			                    <span class="btn btn-default">
-			                        Submit <input type="file" style="display: none;" name="uploadFileForm" multiple>
-			                    </span>
-			                </label>
-			            	</div>
-			        		</form>
-								</td>
-							</tr>
-							<tr>
-								<td class="col-lg-3 col-md-3 col-sm-3">File Download</td>
-								<td>
-									<form class="form-inline" action="/download" method="get">
-										<div class="input-group">
-											<input class="form-control" name="downloadFileName" placeholder="file name" required/>
-											<div class="input-group-btn">
-												<button type="submit" class="btn btn-default">Download</button>
-											</div>
-										</div>
-									</form>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-
-
-
-			<div class="col-lg-5 col-md-5 col-sm-5">
-				<h3>Test Result</h3>
-				<hr>
-				<div class="table-responsive">
-					<table class="table table-bordered text-center">
-						<tbody>
-							<tr>
-								<td>Method</td>
-								<td><%= method %></td>
-							</tr>
-							<tr>
-								<td>Path</td>
-								<td><%= path %></td>
-							</tr>
-							<tr>
-								<td>Query String</td>
-								<td><%= queryString %></td>
-							</tr>
-							<tr>
-								<td>Params</td>
-								<td><%= params %></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<hr>
-				<textarea style="width:100%; min-height:240px; border:1px solid lightgray" id="message" readonly><%= message %></textarea>
-			</div>
-			<div class="col-lg-1 col-md-1 col-sm-1"></div>
+			<canvas id="rcolorhistcanvas"></canvas>
+		</div>
+	</div>
+	
+	<div class="container-fluid">
+		<div class="row">
+			<canvas id="gcolorhistcanvas"></canvas>
+		</div>
+	</div>
+	
+	<div class="container-fluid">
+		<div class="row">
+			<canvas id="bcolorhistcanvas"></canvas>
 		</div>
 	</div>
 
-	<footer class="container-fluid site-footer-container">
-	    <div class="col-sm-1"></div>
-	    <div class="col-sm-10 text-center">
-	      <hr>
-	      <ul style="list-style: none; margin: 0; padding: 0;">
-	        <li style="display: inline; padding-left: 30px;"><span class="glyphicon glyphicon-copyright-mark" ></span>&nbsp;2017 Inodient, All rights reserved</li>
-	        <li style="display: inline; padding-left: 30px;"><a href="https://github.com/inodient/summer-mvc" data-ga-click="Footer, go to contact, text:contact">Get GitHub</a></li>
-	        <!-- <li style="display: inline; padding-left: 30px;"><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">Developer</a></li>
-	        <li style="display: inline; padding-left: 30px;"><a href="https://shop.github.com" data-ga-click="Footer, go to shop, text:shop">Facebook</a></li>
-	        <li style="display: inline; padding-left: 30px;"><a href="/index" data-ga-click="Footer, go to about, text:about">About</a></li> -->
-	      </ul>
-	    </div>
-	    <div class="col-sm-1"></div>
-	</fotter>
+
+	
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-4">
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+				<canvas id="myChart" width="20" height="20"></canvas>
+			</div>
+		</div>
+	</div>
+
+	<footer style="background-color: black">
+		<div class="jumbotron footer-background">
+			<div class="footer-heading">
+				<h2 class="title">Image Parser</h2>
+				<div class="description">Image Analyzing Parser</div>
+			</div>
+
+			<div class="footer-footer">
+				<hr class="color-weaken">
+				<p class="copyright">
+					Copyright(c) 2018 KANGCHANGHO <br> Created and Maintained by <br
+						class="mobile-show"> <a
+						href="mailto:inodient@gmail.com?subject=KANGCHANGHO.COM - OPINITON">Ino
+						Kang [Changho Kang]</a>. <br> <br> This work is using <a
+						href="javascript:getLicenseInfo()">Open Source Projects</a><br
+						class="mobile-show"> and licensed under a <a
+						href="javascript:getLicenseInfo()">MIT License</a>.
+				</p>
+			</div>
+
+		</div>
+	</footer>
+
 </body>
+</html>
