@@ -74,7 +74,7 @@ exports.extractRGB = function( req, res, connection ){
 				for( var i=0; i<image.bitmap.width; i++ ){
 					for( var j=0; j<image.bitmap.height; j++ ){
 
-						logger.debug( Jimp.intToRGBA( image.getPixelColor(i, j) ) );
+						// logger.debug( Jimp.intToRGBA( image.getPixelColor(i, j) ) );
 						
 
 
