@@ -1,0 +1,694 @@
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:06:00.350Z] Initializing : Annotation Parsing Succeed 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:06:00.351Z] Initializing : Set View Engine 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:06:00.351Z] Initializing : Set Body Parser 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:06:00.351Z] Initializing : Set Connection Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:06:00.351Z] Initializing : Set File Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:06:00.351Z] Initializing : Mysql handler doesn't set to use. 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:06:00.351Z] Initializing : Mssql handler doesn't set to use. 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:06:00.351Z] Initializing : Set Exit Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 47 | logger.info - 2018-12-01T09:06:00.361Z] Listen Port for HTTP  : 3000 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 89 | ANONYMOUS_FUNC - 2018-12-01T09:06:07.938Z] ACCEPTED-LANGUAGE : ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 90 | ANONYMOUS_FUNC - 2018-12-01T09:06:07.938Z] REQUEST PATH : / 
+[ERROR] - [/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js : 43 | ANONYMOUS_FUNC - 2018-12-01T09:06:07.941Z] queriesXML is not defined
+/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:48:19,new Promise (<anonymous>),setModel (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:45:10),/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:11:5,new Promise (<anonymous>),Object.exports.control (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:9:10),executeController (/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:217:57),/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:26:11,<anonymous>,process._tickCallback (internal/process/next_tick.js:188:7)
+[ERROR] - [/node_modules/summer-mvc/tools/error/errorHandler.js : 18 | logErrors - 2018-12-01T09:06:07.942Z] Error Occured when [/] called.
+queriesXML is not defined
+	/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:48:19
+	new Promise (<anonymous>)
+	setModel (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:45:10)
+	/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:11:5
+	new Promise (<anonymous>)
+	Object.exports.control (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:9:10)
+	executeController (/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:217:57)
+	/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:26:11
+	<anonymous>
+	process._tickCallback (internal/process/next_tick.js:188:7)
+
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:06:29.543Z] Initializing : Annotation Parsing Succeed 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:06:29.543Z] Initializing : Set View Engine 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:06:29.543Z] Initializing : Set Body Parser 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:06:29.544Z] Initializing : Set Connection Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:06:29.544Z] Initializing : Set File Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:06:29.544Z] Initializing : Mysql handler doesn't set to use. 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:06:29.544Z] Initializing : Mssql handler doesn't set to use. 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:06:29.544Z] Initializing : Set Exit Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 47 | logger.info - 2018-12-01T09:06:29.550Z] Listen Port for HTTP  : 3000 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 89 | ANONYMOUS_FUNC - 2018-12-01T09:06:33.375Z] ACCEPTED-LANGUAGE : ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 90 | ANONYMOUS_FUNC - 2018-12-01T09:06:33.376Z] REQUEST PATH : / 
+[ERROR] - [/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js : 43 | ANONYMOUS_FUNC - 2018-12-01T09:06:33.378Z] queriesXML is not defined
+/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:48:19,new Promise (<anonymous>),setModel (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:45:10),/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:11:5,new Promise (<anonymous>),Object.exports.control (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:9:10),executeController (/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:217:57),/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:26:11,<anonymous>,process._tickCallback (internal/process/next_tick.js:188:7)
+[ERROR] - [/node_modules/summer-mvc/tools/error/errorHandler.js : 18 | logErrors - 2018-12-01T09:06:33.378Z] Error Occured when [/] called.
+queriesXML is not defined
+	/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:48:19
+	new Promise (<anonymous>)
+	setModel (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:45:10)
+	/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:11:5
+	new Promise (<anonymous>)
+	Object.exports.control (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:9:10)
+	executeController (/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:217:57)
+	/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:26:11
+	<anonymous>
+	process._tickCallback (internal/process/next_tick.js:188:7)
+
+[INFO] - [/node_modules/summer-mvc/express_was.js : 89 | ANONYMOUS_FUNC - 2018-12-01T09:06:34.131Z] ACCEPTED-LANGUAGE : ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 90 | ANONYMOUS_FUNC - 2018-12-01T09:06:34.131Z] REQUEST PATH : / 
+[ERROR] - [/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js : 43 | ANONYMOUS_FUNC - 2018-12-01T09:06:34.131Z] queriesXML is not defined
+/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:48:19,new Promise (<anonymous>),setModel (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:45:10),/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:11:5,new Promise (<anonymous>),Object.exports.control (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:9:10),executeController (/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:217:57),/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:26:11,<anonymous>,process._tickCallback (internal/process/next_tick.js:188:7)
+[ERROR] - [/node_modules/summer-mvc/tools/error/errorHandler.js : 18 | logErrors - 2018-12-01T09:06:34.131Z] Error Occured when [/] called.
+queriesXML is not defined
+	/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:48:19
+	new Promise (<anonymous>)
+	setModel (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:45:10)
+	/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:11:5
+	new Promise (<anonymous>)
+	Object.exports.control (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:9:10)
+	executeController (/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:217:57)
+	/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:26:11
+	<anonymous>
+	process._tickCallback (internal/process/next_tick.js:188:7)
+
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:06:45.452Z] Initializing : Annotation Parsing Succeed 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:06:45.453Z] Initializing : Set View Engine 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:06:45.454Z] Initializing : Set Body Parser 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:06:45.454Z] Initializing : Set Connection Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:06:45.454Z] Initializing : Set File Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:06:45.454Z] Initializing : Mysql handler doesn't set to use. 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:06:45.454Z] Initializing : Mssql handler doesn't set to use. 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:06:45.454Z] Initializing : Set Exit Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 47 | logger.info - 2018-12-01T09:06:45.460Z] Listen Port for HTTP  : 3000 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 89 | ANONYMOUS_FUNC - 2018-12-01T09:07:00.807Z] ACCEPTED-LANGUAGE : ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 90 | ANONYMOUS_FUNC - 2018-12-01T09:07:00.807Z] REQUEST PATH : / 
+[ERROR] - [/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js : 43 | ANONYMOUS_FUNC - 2018-12-01T09:07:00.810Z] queriesXML is not defined
+/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:48:19,new Promise (<anonymous>),setModel (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:45:10),/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:11:5,new Promise (<anonymous>),Object.exports.control (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:9:10),executeController (/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:217:57),/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:26:11,<anonymous>,process._tickCallback (internal/process/next_tick.js:188:7)
+[ERROR] - [/node_modules/summer-mvc/tools/error/errorHandler.js : 18 | logErrors - 2018-12-01T09:07:00.811Z] Error Occured when [/] called.
+queriesXML is not defined
+	/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:48:19
+	new Promise (<anonymous>)
+	setModel (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:45:10)
+	/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:11:5
+	new Promise (<anonymous>)
+	Object.exports.control (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:9:10)
+	executeController (/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:217:57)
+	/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:26:11
+	<anonymous>
+	process._tickCallback (internal/process/next_tick.js:188:7)
+
+[INFO] - [/node_modules/summer-mvc/express_was.js : 89 | ANONYMOUS_FUNC - 2018-12-01T09:07:07.289Z] ACCEPTED-LANGUAGE : ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 90 | ANONYMOUS_FUNC - 2018-12-01T09:07:07.289Z] REQUEST PATH : / 
+[ERROR] - [/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js : 43 | ANONYMOUS_FUNC - 2018-12-01T09:07:07.289Z] queriesXML is not defined
+/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:48:19,new Promise (<anonymous>),setModel (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:45:10),/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:11:5,new Promise (<anonymous>),Object.exports.control (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:9:10),executeController (/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:217:57),/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:26:11,<anonymous>,process._tickCallback (internal/process/next_tick.js:188:7)
+[ERROR] - [/node_modules/summer-mvc/tools/error/errorHandler.js : 18 | logErrors - 2018-12-01T09:07:07.289Z] Error Occured when [/] called.
+queriesXML is not defined
+	/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:48:19
+	new Promise (<anonymous>)
+	setModel (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:45:10)
+	/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:11:5
+	new Promise (<anonymous>)
+	Object.exports.control (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:9:10)
+	executeController (/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:217:57)
+	/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:26:11
+	<anonymous>
+	process._tickCallback (internal/process/next_tick.js:188:7)
+
+[INFO] - [/node_modules/summer-mvc/express_was.js : 89 | ANONYMOUS_FUNC - 2018-12-01T09:07:07.934Z] ACCEPTED-LANGUAGE : ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 90 | ANONYMOUS_FUNC - 2018-12-01T09:07:07.934Z] REQUEST PATH : / 
+[ERROR] - [/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js : 43 | ANONYMOUS_FUNC - 2018-12-01T09:07:07.935Z] queriesXML is not defined
+/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:48:19,new Promise (<anonymous>),setModel (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:45:10),/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:11:5,new Promise (<anonymous>),Object.exports.control (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:9:10),executeController (/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:217:57),/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:26:11,<anonymous>,process._tickCallback (internal/process/next_tick.js:188:7)
+[ERROR] - [/node_modules/summer-mvc/tools/error/errorHandler.js : 18 | logErrors - 2018-12-01T09:07:07.935Z] Error Occured when [/] called.
+queriesXML is not defined
+	/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:48:19
+	new Promise (<anonymous>)
+	setModel (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:45:10)
+	/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:11:5
+	new Promise (<anonymous>)
+	Object.exports.control (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:9:10)
+	executeController (/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:217:57)
+	/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:26:11
+	<anonymous>
+	process._tickCallback (internal/process/next_tick.js:188:7)
+
+[INFO] - [/node_modules/summer-mvc/express_was.js : 89 | ANONYMOUS_FUNC - 2018-12-01T09:07:08.340Z] ACCEPTED-LANGUAGE : ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 90 | ANONYMOUS_FUNC - 2018-12-01T09:07:08.340Z] REQUEST PATH : / 
+[ERROR] - [/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js : 43 | ANONYMOUS_FUNC - 2018-12-01T09:07:08.341Z] queriesXML is not defined
+/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:48:19,new Promise (<anonymous>),setModel (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:45:10),/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:11:5,new Promise (<anonymous>),Object.exports.control (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:9:10),executeController (/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:217:57),/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:26:11,<anonymous>,process._tickCallback (internal/process/next_tick.js:188:7)
+[ERROR] - [/node_modules/summer-mvc/tools/error/errorHandler.js : 18 | logErrors - 2018-12-01T09:07:08.341Z] Error Occured when [/] called.
+queriesXML is not defined
+	/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:48:19
+	new Promise (<anonymous>)
+	setModel (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:45:10)
+	/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:11:5
+	new Promise (<anonymous>)
+	Object.exports.control (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:9:10)
+	executeController (/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:217:57)
+	/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:26:11
+	<anonymous>
+	process._tickCallback (internal/process/next_tick.js:188:7)
+
+[INFO] - [/node_modules/summer-mvc/express_was.js : 89 | ANONYMOUS_FUNC - 2018-12-01T09:07:08.678Z] ACCEPTED-LANGUAGE : ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 90 | ANONYMOUS_FUNC - 2018-12-01T09:07:08.678Z] REQUEST PATH : / 
+[ERROR] - [/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js : 43 | ANONYMOUS_FUNC - 2018-12-01T09:07:08.678Z] queriesXML is not defined
+/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:48:19,new Promise (<anonymous>),setModel (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:45:10),/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:11:5,new Promise (<anonymous>),Object.exports.control (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:9:10),executeController (/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:217:57),/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:26:11,<anonymous>,process._tickCallback (internal/process/next_tick.js:188:7)
+[ERROR] - [/node_modules/summer-mvc/tools/error/errorHandler.js : 18 | logErrors - 2018-12-01T09:07:08.679Z] Error Occured when [/] called.
+queriesXML is not defined
+	/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:48:19
+	new Promise (<anonymous>)
+	setModel (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:45:10)
+	/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:11:5
+	new Promise (<anonymous>)
+	Object.exports.control (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:9:10)
+	executeController (/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:217:57)
+	/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:26:11
+	<anonymous>
+	process._tickCallback (internal/process/next_tick.js:188:7)
+
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:08:45.945Z] Initializing : Annotation Parsing Succeed 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:08:45.946Z] Initializing : Set View Engine 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:08:45.946Z] Initializing : Set Body Parser 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:08:45.946Z] Initializing : Set Connection Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:08:45.946Z] Initializing : Set File Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:08:45.946Z] Initializing : Mysql handler doesn't set to use. 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:08:45.946Z] Initializing : Mssql handler doesn't set to use. 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:08:45.946Z] Initializing : Set Exit Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 47 | logger.info - 2018-12-01T09:08:45.952Z] Listen Port for HTTP  : 3000 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 89 | ANONYMOUS_FUNC - 2018-12-01T09:08:49.598Z] ACCEPTED-LANGUAGE : ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 90 | ANONYMOUS_FUNC - 2018-12-01T09:08:49.598Z] REQUEST PATH : / 
+[ERROR] - [/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js : 43 | ANONYMOUS_FUNC - 2018-12-01T09:08:49.600Z] queriesXML is not defined
+/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:48:19,new Promise (<anonymous>),setModel (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:45:10),/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:11:5,new Promise (<anonymous>),Object.exports.control (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:9:10),executeController (/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:217:57),/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:26:11,<anonymous>,process._tickCallback (internal/process/next_tick.js:188:7)
+[ERROR] - [/node_modules/summer-mvc/tools/error/errorHandler.js : 18 | logErrors - 2018-12-01T09:08:49.601Z] Error Occured when [/] called.
+queriesXML is not defined
+	/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:48:19
+	new Promise (<anonymous>)
+	setModel (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:45:10)
+	/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:11:5
+	new Promise (<anonymous>)
+	Object.exports.control (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:9:10)
+	executeController (/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:217:57)
+	/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:26:11
+	<anonymous>
+	process._tickCallback (internal/process/next_tick.js:188:7)
+
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:10:56.827Z] Initializing : Annotation Parsing Succeed 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:10:56.828Z] Initializing : Set View Engine 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:10:56.828Z] Initializing : Set Body Parser 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:10:56.828Z] Initializing : Set Connection Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:10:56.829Z] Initializing : Set File Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:10:56.829Z] Initializing : Mysql handler doesn't set to use. 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:10:56.829Z] Initializing : Mssql handler doesn't set to use. 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:10:56.829Z] Initializing : Set Exit Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 47 | logger.info - 2018-12-01T09:10:56.836Z] Listen Port for HTTP  : 3000 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 89 | ANONYMOUS_FUNC - 2018-12-01T09:10:58.745Z] ACCEPTED-LANGUAGE : ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 90 | ANONYMOUS_FUNC - 2018-12-01T09:10:58.745Z] REQUEST PATH : / 
+[ERROR] - [/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js : 43 | ANONYMOUS_FUNC - 2018-12-01T09:10:58.748Z] queriesXML is not defined
+/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:48:19,new Promise (<anonymous>),setModel (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:45:10),/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:11:5,new Promise (<anonymous>),Object.exports.control (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:9:10),executeController (/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:217:57),/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:26:11,<anonymous>,process._tickCallback (internal/process/next_tick.js:188:7)
+[ERROR] - [/node_modules/summer-mvc/tools/error/errorHandler.js : 18 | logErrors - 2018-12-01T09:10:58.748Z] Error Occured when [/] called.
+queriesXML is not defined
+	/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:48:19
+	new Promise (<anonymous>)
+	setModel (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:45:10)
+	/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:11:5
+	new Promise (<anonymous>)
+	Object.exports.control (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:9:10)
+	executeController (/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:217:57)
+	/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:26:11
+	<anonymous>
+	process._tickCallback (internal/process/next_tick.js:188:7)
+
+[INFO] - [/node_modules/summer-mvc/express_was.js : 89 | ANONYMOUS_FUNC - 2018-12-01T09:10:59.475Z] ACCEPTED-LANGUAGE : ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 90 | ANONYMOUS_FUNC - 2018-12-01T09:10:59.475Z] REQUEST PATH : / 
+[ERROR] - [/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js : 43 | ANONYMOUS_FUNC - 2018-12-01T09:10:59.476Z] queriesXML is not defined
+/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:48:19,new Promise (<anonymous>),setModel (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:45:10),/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:11:5,new Promise (<anonymous>),Object.exports.control (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:9:10),executeController (/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:217:57),/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:26:11,<anonymous>,process._tickCallback (internal/process/next_tick.js:188:7)
+[ERROR] - [/node_modules/summer-mvc/tools/error/errorHandler.js : 18 | logErrors - 2018-12-01T09:10:59.476Z] Error Occured when [/] called.
+queriesXML is not defined
+	/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:48:19
+	new Promise (<anonymous>)
+	setModel (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:45:10)
+	/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:11:5
+	new Promise (<anonymous>)
+	Object.exports.control (/Users/inodient/Development/git/image_analyzer/application/controllers/controller_basic.js:9:10)
+	executeController (/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:217:57)
+	/Users/inodient/Development/git/image_analyzer/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js:26:11
+	<anonymous>
+	process._tickCallback (internal/process/next_tick.js:188:7)
+
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:30:55.800Z] Initializing : Annotation Parsing Succeed 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:30:55.800Z] Initializing : Set View Engine 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:30:55.801Z] Initializing : Set Body Parser 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:30:55.801Z] Initializing : Set Connection Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:30:55.801Z] Initializing : Set File Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:30:55.801Z] Initializing : Set MySql Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:30:55.801Z] Initializing : Mssql handler doesn't set to use. 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:30:55.801Z] Initializing : Set Exit Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 47 | logger.info - 2018-12-01T09:30:55.808Z] Listen Port for HTTP  : 3000 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 89 | ANONYMOUS_FUNC - 2018-12-01T09:30:57.567Z] ACCEPTED-LANGUAGE : ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 90 | ANONYMOUS_FUNC - 2018-12-01T09:30:57.567Z] REQUEST PATH : / 
+[ERROR] - [/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js : 123 | ANONYMOUS_FUNC - 2018-12-01T09:30:57.573Z] getaddrinfo ENOTFOUND **** ****:3306
+errnoException (dns.js:50:10),GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:92:26)
+[ERROR] - [/node_modules/summer-mvc/core/dispatcher/context_dispatcher.js : 48 | ANONYMOUS_FUNC - 2018-12-01T09:30:57.574Z] getaddrinfo ENOTFOUND **** ****:3306
+errnoException (dns.js:50:10),GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:92:26)
+[ERROR] - [/node_modules/summer-mvc/tools/error/errorHandler.js : 18 | logErrors - 2018-12-01T09:30:57.574Z] Error Occured when [/] called.
+getaddrinfo ENOTFOUND **** ****:3306
+	errnoException (dns.js:50:10)
+	GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:92:26)
+
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:31:36.757Z] Initializing : Annotation Parsing Succeed 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:31:36.758Z] Initializing : Set View Engine 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:31:36.758Z] Initializing : Set Body Parser 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:31:36.758Z] Initializing : Set Connection Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:31:36.758Z] Initializing : Set File Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:31:36.758Z] Initializing : Set MySql Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:31:36.758Z] Initializing : Mssql handler doesn't set to use. 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:31:36.758Z] Initializing : Set Exit Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 47 | logger.info - 2018-12-01T09:31:36.765Z] Listen Port for HTTP  : 3000 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 89 | ANONYMOUS_FUNC - 2018-12-01T09:31:38.294Z] ACCEPTED-LANGUAGE : ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 90 | ANONYMOUS_FUNC - 2018-12-01T09:31:38.294Z] REQUEST PATH : / 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:32:36.043Z] Initializing : Annotation Parsing Succeed 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:32:36.044Z] Initializing : Set View Engine 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:32:36.044Z] Initializing : Set Body Parser 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:32:36.044Z] Initializing : Set Connection Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:32:36.044Z] Initializing : Set File Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:32:36.044Z] Initializing : Set MySql Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:32:36.044Z] Initializing : Mssql handler doesn't set to use. 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:32:36.044Z] Initializing : Set Exit Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 47 | logger.info - 2018-12-01T09:32:36.050Z] Listen Port for HTTP  : 3000 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 89 | ANONYMOUS_FUNC - 2018-12-01T09:32:38.037Z] ACCEPTED-LANGUAGE : ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 90 | ANONYMOUS_FUNC - 2018-12-01T09:32:38.037Z] REQUEST PATH : / 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 89 | ANONYMOUS_FUNC - 2018-12-01T09:32:41.387Z] ACCEPTED-LANGUAGE : ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 90 | ANONYMOUS_FUNC - 2018-12-01T09:32:41.387Z] REQUEST PATH : /welcome 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:33:20.420Z] Initializing : Annotation Parsing Succeed 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:33:20.421Z] Initializing : Set View Engine 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:33:20.421Z] Initializing : Set Body Parser 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:33:20.421Z] Initializing : Set Connection Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:33:20.421Z] Initializing : Set File Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:33:20.421Z] Initializing : Set MySql Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:33:20.421Z] Initializing : Mssql handler doesn't set to use. 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:33:20.421Z] Initializing : Set Exit Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 47 | logger.info - 2018-12-01T09:33:20.427Z] Listen Port for HTTP  : 3000 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 89 | ANONYMOUS_FUNC - 2018-12-01T09:33:22.404Z] ACCEPTED-LANGUAGE : ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 90 | ANONYMOUS_FUNC - 2018-12-01T09:33:22.404Z] REQUEST PATH : /welcome 
+[ERROR] - [/node_modules/summer-mvc/tools/error/errorHandler.js : 18 | logErrors - 2018-12-01T09:33:22.450Z] Error Occured when [/welcome] called.
+Invalid or unexpected token in /Users/inodient/Development/git/image_analyzer/application/views/welcome.ejs while compiling ejs
+	
+	If the above error is not helpful
+	 you may want to try EJS-Lint:
+	https://github.com/RyanZim/EJS-Lint
+	Or
+	 if you meant to create an async function
+	 pass async: true as an option.
+	new Function (<anonymous>)
+	Template.compile (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:618:12)
+	Object.compile (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:389:16)
+	handleCache (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:212:18)
+	tryHandleCache (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:251:16)
+	View.exports.renderFile [as engine] (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:482:10)
+	View.render (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/view.js:135:8)
+	tryRender (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/application.js:640:10)
+	Function.render (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/application.js:592:3)
+	ServerResponse.render (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/response.js:1008:7)
+
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:33:51.564Z] Initializing : Annotation Parsing Succeed 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:33:51.564Z] Initializing : Set View Engine 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:33:51.564Z] Initializing : Set Body Parser 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:33:51.564Z] Initializing : Set Connection Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:33:51.564Z] Initializing : Set File Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:33:51.564Z] Initializing : Set MySql Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:33:51.564Z] Initializing : Mssql handler doesn't set to use. 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:33:51.565Z] Initializing : Set Exit Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 47 | logger.info - 2018-12-01T09:33:51.570Z] Listen Port for HTTP  : 3000 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:33:52.572Z] Initializing : Annotation Parsing Succeed 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:33:52.572Z] Initializing : Set View Engine 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:33:52.572Z] Initializing : Set Body Parser 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:33:52.573Z] Initializing : Set Connection Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:33:52.573Z] Initializing : Set File Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:33:52.573Z] Initializing : Set MySql Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:33:52.573Z] Initializing : Mssql handler doesn't set to use. 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:33:52.573Z] Initializing : Set Exit Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 47 | logger.info - 2018-12-01T09:33:52.578Z] Listen Port for HTTP  : 3000 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:33:54.585Z] Initializing : Annotation Parsing Succeed 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:33:54.586Z] Initializing : Set View Engine 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:33:54.586Z] Initializing : Set Body Parser 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:33:54.586Z] Initializing : Set Connection Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:33:54.586Z] Initializing : Set File Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:33:54.586Z] Initializing : Set MySql Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:33:54.586Z] Initializing : Mssql handler doesn't set to use. 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:33:54.586Z] Initializing : Set Exit Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 47 | logger.info - 2018-12-01T09:33:54.592Z] Listen Port for HTTP  : 3000 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 89 | ANONYMOUS_FUNC - 2018-12-01T09:33:56.318Z] ACCEPTED-LANGUAGE : ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 90 | ANONYMOUS_FUNC - 2018-12-01T09:33:56.318Z] REQUEST PATH : /welcome 
+[ERROR] - [/node_modules/summer-mvc/tools/error/errorHandler.js : 18 | logErrors - 2018-12-01T09:33:56.384Z] Error Occured when [/welcome] called.
+Unexpected token < in /Users/inodient/Development/git/image_analyzer/application/views/welcome.ejs while compiling ejs
+	
+	If the above error is not helpful
+	 you may want to try EJS-Lint:
+	https://github.com/RyanZim/EJS-Lint
+	Or
+	 if you meant to create an async function
+	 pass async: true as an option.
+	new Function (<anonymous>)
+	Template.compile (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:618:12)
+	Object.compile (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:389:16)
+	handleCache (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:212:18)
+	tryHandleCache (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:251:16)
+	View.exports.renderFile [as engine] (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:482:10)
+	View.render (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/view.js:135:8)
+	tryRender (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/application.js:640:10)
+	Function.render (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/application.js:592:3)
+	ServerResponse.render (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/response.js:1008:7)
+
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:34:26.795Z] Initializing : Annotation Parsing Succeed 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:34:26.796Z] Initializing : Set View Engine 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:34:26.796Z] Initializing : Set Body Parser 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:34:26.796Z] Initializing : Set Connection Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:34:26.796Z] Initializing : Set File Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:34:26.796Z] Initializing : Set MySql Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:34:26.796Z] Initializing : Mssql handler doesn't set to use. 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:34:26.796Z] Initializing : Set Exit Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 47 | logger.info - 2018-12-01T09:34:26.804Z] Listen Port for HTTP  : 3000 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:34:37.755Z] Initializing : Annotation Parsing Succeed 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:34:37.756Z] Initializing : Set View Engine 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:34:37.756Z] Initializing : Set Body Parser 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:34:37.756Z] Initializing : Set Connection Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:34:37.756Z] Initializing : Set File Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:34:37.757Z] Initializing : Set MySql Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:34:37.757Z] Initializing : Mssql handler doesn't set to use. 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:34:37.757Z] Initializing : Set Exit Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 47 | logger.info - 2018-12-01T09:34:37.762Z] Listen Port for HTTP  : 3000 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 89 | ANONYMOUS_FUNC - 2018-12-01T09:34:37.963Z] ACCEPTED-LANGUAGE : ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 90 | ANONYMOUS_FUNC - 2018-12-01T09:34:37.963Z] REQUEST PATH : /welcome 
+[ERROR] - [/node_modules/summer-mvc/tools/error/errorHandler.js : 18 | logErrors - 2018-12-01T09:34:38.033Z] Error Occured when [/welcome] called.
+Unexpected token < in /Users/inodient/Development/git/image_analyzer/application/views/welcome.ejs while compiling ejs
+	
+	If the above error is not helpful
+	 you may want to try EJS-Lint:
+	https://github.com/RyanZim/EJS-Lint
+	Or
+	 if you meant to create an async function
+	 pass async: true as an option.
+	new Function (<anonymous>)
+	Template.compile (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:618:12)
+	Object.compile (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:389:16)
+	handleCache (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:212:18)
+	tryHandleCache (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:251:16)
+	View.exports.renderFile [as engine] (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:482:10)
+	View.render (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/view.js:135:8)
+	tryRender (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/application.js:640:10)
+	Function.render (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/application.js:592:3)
+	ServerResponse.render (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/response.js:1008:7)
+
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:35:19.856Z] Initializing : Annotation Parsing Succeed 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:35:19.857Z] Initializing : Set View Engine 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:35:19.857Z] Initializing : Set Body Parser 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:35:19.857Z] Initializing : Set Connection Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:35:19.857Z] Initializing : Set File Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:35:19.857Z] Initializing : Set MySql Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:35:19.857Z] Initializing : Mssql handler doesn't set to use. 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:35:19.857Z] Initializing : Set Exit Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 47 | logger.info - 2018-12-01T09:35:19.863Z] Listen Port for HTTP  : 3000 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 89 | ANONYMOUS_FUNC - 2018-12-01T09:35:36.905Z] ACCEPTED-LANGUAGE : ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 90 | ANONYMOUS_FUNC - 2018-12-01T09:35:36.905Z] REQUEST PATH : /welcome 
+[ERROR] - [/node_modules/summer-mvc/tools/error/errorHandler.js : 18 | logErrors - 2018-12-01T09:35:37.092Z] Error Occured when [/welcome] called.
+Unexpected token < in /Users/inodient/Development/git/image_analyzer/application/views/welcome.ejs while compiling ejs
+	
+	If the above error is not helpful
+	 you may want to try EJS-Lint:
+	https://github.com/RyanZim/EJS-Lint
+	Or
+	 if you meant to create an async function
+	 pass async: true as an option.
+	new Function (<anonymous>)
+	Template.compile (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:618:12)
+	Object.compile (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:389:16)
+	handleCache (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:212:18)
+	tryHandleCache (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:251:16)
+	View.exports.renderFile [as engine] (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:482:10)
+	View.render (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/view.js:135:8)
+	tryRender (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/application.js:640:10)
+	Function.render (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/application.js:592:3)
+	ServerResponse.render (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/response.js:1008:7)
+
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:35:52.956Z] Initializing : Annotation Parsing Succeed 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:35:52.957Z] Initializing : Set View Engine 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:35:52.957Z] Initializing : Set Body Parser 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:35:52.957Z] Initializing : Set Connection Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:35:52.957Z] Initializing : Set File Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:35:52.957Z] Initializing : Set MySql Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:35:52.957Z] Initializing : Mssql handler doesn't set to use. 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:35:52.958Z] Initializing : Set Exit Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 47 | logger.info - 2018-12-01T09:35:52.963Z] Listen Port for HTTP  : 3000 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:35:59.614Z] Initializing : Annotation Parsing Succeed 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:35:59.615Z] Initializing : Set View Engine 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:35:59.615Z] Initializing : Set Body Parser 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:35:59.615Z] Initializing : Set Connection Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:35:59.615Z] Initializing : Set File Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:35:59.615Z] Initializing : Set MySql Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:35:59.615Z] Initializing : Mssql handler doesn't set to use. 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:35:59.615Z] Initializing : Set Exit Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 47 | logger.info - 2018-12-01T09:35:59.622Z] Listen Port for HTTP  : 3000 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 89 | ANONYMOUS_FUNC - 2018-12-01T09:36:01.480Z] ACCEPTED-LANGUAGE : ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 90 | ANONYMOUS_FUNC - 2018-12-01T09:36:01.481Z] REQUEST PATH : /welcome 
+[ERROR] - [/node_modules/summer-mvc/tools/error/errorHandler.js : 18 | logErrors - 2018-12-01T09:36:01.558Z] Error Occured when [/welcome] called.
+Unexpected token < in /Users/inodient/Development/git/image_analyzer/application/views/welcome.ejs while compiling ejs
+	
+	If the above error is not helpful
+	 you may want to try EJS-Lint:
+	https://github.com/RyanZim/EJS-Lint
+	Or
+	 if you meant to create an async function
+	 pass async: true as an option.
+	new Function (<anonymous>)
+	Template.compile (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:618:12)
+	Object.compile (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:389:16)
+	handleCache (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:212:18)
+	tryHandleCache (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:251:16)
+	View.exports.renderFile [as engine] (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:482:10)
+	View.render (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/view.js:135:8)
+	tryRender (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/application.js:640:10)
+	Function.render (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/application.js:592:3)
+	ServerResponse.render (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/response.js:1008:7)
+
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:36:53.842Z] Initializing : Annotation Parsing Succeed 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:36:53.842Z] Initializing : Set View Engine 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:36:53.842Z] Initializing : Set Body Parser 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:36:53.842Z] Initializing : Set Connection Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:36:53.842Z] Initializing : Set File Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:36:53.842Z] Initializing : Set MySql Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:36:53.843Z] Initializing : Mssql handler doesn't set to use. 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:36:53.843Z] Initializing : Set Exit Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 47 | logger.info - 2018-12-01T09:36:53.848Z] Listen Port for HTTP  : 3000 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:37:01.930Z] Initializing : Annotation Parsing Succeed 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:37:01.931Z] Initializing : Set View Engine 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:37:01.931Z] Initializing : Set Body Parser 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:37:01.931Z] Initializing : Set Connection Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:37:01.931Z] Initializing : Set File Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:37:01.931Z] Initializing : Set MySql Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:37:01.931Z] Initializing : Mssql handler doesn't set to use. 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:37:01.931Z] Initializing : Set Exit Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 47 | logger.info - 2018-12-01T09:37:01.937Z] Listen Port for HTTP  : 3000 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 89 | ANONYMOUS_FUNC - 2018-12-01T09:37:03.797Z] ACCEPTED-LANGUAGE : ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 90 | ANONYMOUS_FUNC - 2018-12-01T09:37:03.797Z] REQUEST PATH : /welcome 
+[ERROR] - [/node_modules/summer-mvc/tools/error/errorHandler.js : 18 | logErrors - 2018-12-01T09:37:03.864Z] Error Occured when [/welcome] called.
+Unexpected token < in /Users/inodient/Development/git/image_analyzer/application/views/welcome.ejs while compiling ejs
+	
+	If the above error is not helpful
+	 you may want to try EJS-Lint:
+	https://github.com/RyanZim/EJS-Lint
+	Or
+	 if you meant to create an async function
+	 pass async: true as an option.
+	new Function (<anonymous>)
+	Template.compile (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:618:12)
+	Object.compile (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:389:16)
+	handleCache (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:212:18)
+	tryHandleCache (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:251:16)
+	View.exports.renderFile [as engine] (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:482:10)
+	View.render (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/view.js:135:8)
+	tryRender (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/application.js:640:10)
+	Function.render (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/application.js:592:3)
+	ServerResponse.render (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/response.js:1008:7)
+
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:38:04.182Z] Initializing : Annotation Parsing Succeed 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:38:04.182Z] Initializing : Set View Engine 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:38:04.182Z] Initializing : Set Body Parser 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:38:04.182Z] Initializing : Set Connection Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:38:04.183Z] Initializing : Set File Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:38:04.183Z] Initializing : Set MySql Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:38:04.183Z] Initializing : Mssql handler doesn't set to use. 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:38:04.183Z] Initializing : Set Exit Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 47 | logger.info - 2018-12-01T09:38:04.190Z] Listen Port for HTTP  : 3000 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:38:08.184Z] Initializing : Annotation Parsing Succeed 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:38:08.184Z] Initializing : Set View Engine 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:38:08.184Z] Initializing : Set Body Parser 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:38:08.184Z] Initializing : Set Connection Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:38:08.185Z] Initializing : Set File Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:38:08.185Z] Initializing : Set MySql Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:38:08.185Z] Initializing : Mssql handler doesn't set to use. 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:38:08.185Z] Initializing : Set Exit Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 47 | logger.info - 2018-12-01T09:38:08.190Z] Listen Port for HTTP  : 3000 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 89 | ANONYMOUS_FUNC - 2018-12-01T09:38:26.034Z] ACCEPTED-LANGUAGE : ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 90 | ANONYMOUS_FUNC - 2018-12-01T09:38:26.035Z] REQUEST PATH : /welcome 
+[ERROR] - [/node_modules/summer-mvc/tools/error/errorHandler.js : 18 | logErrors - 2018-12-01T09:38:26.094Z] Error Occured when [/welcome] called.
+Unexpected token < in /Users/inodient/Development/git/image_analyzer/application/views/welcome.ejs while compiling ejs
+	
+	If the above error is not helpful
+	 you may want to try EJS-Lint:
+	https://github.com/RyanZim/EJS-Lint
+	Or
+	 if you meant to create an async function
+	 pass async: true as an option.
+	new Function (<anonymous>)
+	Template.compile (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:618:12)
+	Object.compile (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:389:16)
+	handleCache (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:212:18)
+	tryHandleCache (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:251:16)
+	View.exports.renderFile [as engine] (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:482:10)
+	View.render (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/view.js:135:8)
+	tryRender (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/application.js:640:10)
+	Function.render (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/application.js:592:3)
+	ServerResponse.render (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/response.js:1008:7)
+
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:38:59.855Z] Initializing : Annotation Parsing Succeed 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:38:59.856Z] Initializing : Set View Engine 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:38:59.856Z] Initializing : Set Body Parser 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:38:59.856Z] Initializing : Set Connection Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:38:59.856Z] Initializing : Set File Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:38:59.856Z] Initializing : Set MySql Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:38:59.856Z] Initializing : Mssql handler doesn't set to use. 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:38:59.856Z] Initializing : Set Exit Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 47 | logger.info - 2018-12-01T09:38:59.862Z] Listen Port for HTTP  : 3000 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 89 | ANONYMOUS_FUNC - 2018-12-01T09:39:01.470Z] ACCEPTED-LANGUAGE : ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 90 | ANONYMOUS_FUNC - 2018-12-01T09:39:01.471Z] REQUEST PATH : /welcome 
+[ERROR] - [/node_modules/summer-mvc/tools/error/errorHandler.js : 18 | logErrors - 2018-12-01T09:39:01.538Z] Error Occured when [/welcome] called.
+Unexpected token < in /Users/inodient/Development/git/image_analyzer/application/views/welcome.ejs while compiling ejs
+	
+	If the above error is not helpful
+	 you may want to try EJS-Lint:
+	https://github.com/RyanZim/EJS-Lint
+	Or
+	 if you meant to create an async function
+	 pass async: true as an option.
+	new Function (<anonymous>)
+	Template.compile (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:618:12)
+	Object.compile (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:389:16)
+	handleCache (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:212:18)
+	tryHandleCache (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:251:16)
+	View.exports.renderFile [as engine] (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:482:10)
+	View.render (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/view.js:135:8)
+	tryRender (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/application.js:640:10)
+	Function.render (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/application.js:592:3)
+	ServerResponse.render (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/response.js:1008:7)
+
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:39:49.079Z] Initializing : Annotation Parsing Succeed 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:39:49.080Z] Initializing : Set View Engine 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:39:49.080Z] Initializing : Set Body Parser 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:39:49.080Z] Initializing : Set Connection Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:39:49.080Z] Initializing : Set File Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:39:49.080Z] Initializing : Set MySql Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:39:49.080Z] Initializing : Mssql handler doesn't set to use. 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:39:49.080Z] Initializing : Set Exit Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 47 | logger.info - 2018-12-01T09:39:49.087Z] Listen Port for HTTP  : 3000 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:39:51.467Z] Initializing : Annotation Parsing Succeed 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:39:51.467Z] Initializing : Set View Engine 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:39:51.467Z] Initializing : Set Body Parser 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:39:51.467Z] Initializing : Set Connection Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:39:51.468Z] Initializing : Set File Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:39:51.468Z] Initializing : Set MySql Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:39:51.468Z] Initializing : Mssql handler doesn't set to use. 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:39:51.468Z] Initializing : Set Exit Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 47 | logger.info - 2018-12-01T09:39:51.473Z] Listen Port for HTTP  : 3000 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 89 | ANONYMOUS_FUNC - 2018-12-01T09:39:53.264Z] ACCEPTED-LANGUAGE : ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 90 | ANONYMOUS_FUNC - 2018-12-01T09:39:53.264Z] REQUEST PATH : /welcome 
+[ERROR] - [/node_modules/summer-mvc/tools/error/errorHandler.js : 18 | logErrors - 2018-12-01T09:39:53.308Z] Error Occured when [/welcome] called.
+Unexpected token < in /Users/inodient/Development/git/image_analyzer/application/views/welcome.ejs while compiling ejs
+	
+	If the above error is not helpful
+	 you may want to try EJS-Lint:
+	https://github.com/RyanZim/EJS-Lint
+	Or
+	 if you meant to create an async function
+	 pass async: true as an option.
+	new Function (<anonymous>)
+	Template.compile (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:618:12)
+	Object.compile (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:389:16)
+	handleCache (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:212:18)
+	tryHandleCache (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:251:16)
+	View.exports.renderFile [as engine] (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:482:10)
+	View.render (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/view.js:135:8)
+	tryRender (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/application.js:640:10)
+	Function.render (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/application.js:592:3)
+	ServerResponse.render (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/response.js:1008:7)
+
+[INFO] - [/node_modules/summer-mvc/express_was.js : 89 | ANONYMOUS_FUNC - 2018-12-01T09:39:54.159Z] ACCEPTED-LANGUAGE : ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 90 | ANONYMOUS_FUNC - 2018-12-01T09:39:54.159Z] REQUEST PATH : /welcome 
+[ERROR] - [/node_modules/summer-mvc/tools/error/errorHandler.js : 18 | logErrors - 2018-12-01T09:39:54.206Z] Error Occured when [/welcome] called.
+Unexpected token < in /Users/inodient/Development/git/image_analyzer/application/views/welcome.ejs while compiling ejs
+	
+	If the above error is not helpful
+	 you may want to try EJS-Lint:
+	https://github.com/RyanZim/EJS-Lint
+	Or
+	 if you meant to create an async function
+	 pass async: true as an option.
+	new Function (<anonymous>)
+	Template.compile (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:618:12)
+	Object.compile (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:389:16)
+	handleCache (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:212:18)
+	tryHandleCache (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:251:16)
+	View.exports.renderFile [as engine] (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:482:10)
+	View.render (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/view.js:135:8)
+	tryRender (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/application.js:640:10)
+	Function.render (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/application.js:592:3)
+	ServerResponse.render (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/response.js:1008:7)
+
+[INFO] - [/node_modules/summer-mvc/express_was.js : 89 | ANONYMOUS_FUNC - 2018-12-01T09:39:54.607Z] ACCEPTED-LANGUAGE : ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 90 | ANONYMOUS_FUNC - 2018-12-01T09:39:54.607Z] REQUEST PATH : /welcome 
+[ERROR] - [/node_modules/summer-mvc/tools/error/errorHandler.js : 18 | logErrors - 2018-12-01T09:39:54.637Z] Error Occured when [/welcome] called.
+Unexpected token < in /Users/inodient/Development/git/image_analyzer/application/views/welcome.ejs while compiling ejs
+	
+	If the above error is not helpful
+	 you may want to try EJS-Lint:
+	https://github.com/RyanZim/EJS-Lint
+	Or
+	 if you meant to create an async function
+	 pass async: true as an option.
+	new Function (<anonymous>)
+	Template.compile (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:618:12)
+	Object.compile (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:389:16)
+	handleCache (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:212:18)
+	tryHandleCache (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:251:16)
+	View.exports.renderFile [as engine] (/Users/inodient/Development/git/image_analyzer/node_modules/ejs/lib/ejs.js:482:10)
+	View.render (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/view.js:135:8)
+	tryRender (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/application.js:640:10)
+	Function.render (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/application.js:592:3)
+	ServerResponse.render (/Users/inodient/Development/git/image_analyzer/node_modules/express/lib/response.js:1008:7)
+
+[INFO] - [/node_modules/summer-mvc/express_was.js : 89 | ANONYMOUS_FUNC - 2018-12-01T09:39:56.368Z] ACCEPTED-LANGUAGE : ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 90 | ANONYMOUS_FUNC - 2018-12-01T09:39:56.368Z] REQUEST PATH : /std 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:39:59.594Z] Initializing : Annotation Parsing Succeed 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:39:59.595Z] Initializing : Set View Engine 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:39:59.595Z] Initializing : Set Body Parser 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:39:59.595Z] Initializing : Set Connection Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:39:59.595Z] Initializing : Set File Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:39:59.595Z] Initializing : Set MySql Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:39:59.595Z] Initializing : Mssql handler doesn't set to use. 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:39:59.595Z] Initializing : Set Exit Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 47 | logger.info - 2018-12-01T09:39:59.602Z] Listen Port for HTTP  : 3000 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 89 | ANONYMOUS_FUNC - 2018-12-01T09:39:59.841Z] ACCEPTED-LANGUAGE : ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 90 | ANONYMOUS_FUNC - 2018-12-01T09:39:59.841Z] REQUEST PATH : /std 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 89 | ANONYMOUS_FUNC - 2018-12-01T09:40:23.879Z] ACCEPTED-LANGUAGE : ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 90 | ANONYMOUS_FUNC - 2018-12-01T09:40:23.879Z] REQUEST PATH : /std 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 89 | ANONYMOUS_FUNC - 2018-12-01T09:42:11.223Z] ACCEPTED-LANGUAGE : ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 90 | ANONYMOUS_FUNC - 2018-12-01T09:42:11.223Z] REQUEST PATH : /std 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:42:15.260Z] Initializing : Annotation Parsing Succeed 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:42:15.260Z] Initializing : Set View Engine 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:42:15.260Z] Initializing : Set Body Parser 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:42:15.260Z] Initializing : Set Connection Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:42:15.260Z] Initializing : Set File Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:42:15.261Z] Initializing : Set MySql Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:42:15.261Z] Initializing : Mssql handler doesn't set to use. 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-12-01T09:42:15.261Z] Initializing : Set Exit Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 47 | logger.info - 2018-12-01T09:42:15.266Z] Listen Port for HTTP  : 3000 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 89 | ANONYMOUS_FUNC - 2018-12-01T09:42:17.078Z] ACCEPTED-LANGUAGE : ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 90 | ANONYMOUS_FUNC - 2018-12-01T09:42:17.078Z] REQUEST PATH : /std 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 89 | ANONYMOUS_FUNC - 2018-12-01T09:42:17.894Z] ACCEPTED-LANGUAGE : ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 90 | ANONYMOUS_FUNC - 2018-12-01T09:42:17.894Z] REQUEST PATH : /std 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 89 | ANONYMOUS_FUNC - 2018-12-01T09:43:04.291Z] ACCEPTED-LANGUAGE : ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 90 | ANONYMOUS_FUNC - 2018-12-01T09:43:04.291Z] REQUEST PATH : /std 

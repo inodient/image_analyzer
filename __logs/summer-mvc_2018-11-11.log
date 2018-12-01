@@ -1,0 +1,18 @@
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-11-11T06:42:36.994Z] Initializing : Annotation Parsing Succeed 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-11-11T06:42:36.994Z] Initializing : Set View Engine 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-11-11T06:42:36.994Z] Initializing : Set Body Parser 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-11-11T06:42:36.995Z] Initializing : Set Connection Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-11-11T06:42:36.995Z] Initializing : Set File Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-11-11T06:42:36.995Z] Initializing : Mysql handler doesn't set to use. 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-11-11T06:42:36.995Z] Initializing : Mssql handler doesn't set to use. 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-11-11T06:42:36.995Z] Initializing : Set Exit Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 47 | logger.info - 2018-11-11T06:42:37.002Z] Listen Port for HTTP  : 3000 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-11-11T06:42:50.481Z] Initializing : Annotation Parsing Succeed 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-11-11T06:42:50.481Z] Initializing : Set View Engine 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-11-11T06:42:50.481Z] Initializing : Set Body Parser 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-11-11T06:42:50.481Z] Initializing : Set Connection Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-11-11T06:42:50.481Z] Initializing : Set File Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-11-11T06:42:50.481Z] Initializing : Mysql handler doesn't set to use. 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-11-11T06:42:50.482Z] Initializing : Mssql handler doesn't set to use. 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 37 | ANONYMOUS_FUNC - 2018-11-11T06:42:50.482Z] Initializing : Set Exit Handler 
+[INFO] - [/node_modules/summer-mvc/express_was.js : 47 | logger.info - 2018-11-11T06:42:50.487Z] Listen Port for HTTP  : 3000 
