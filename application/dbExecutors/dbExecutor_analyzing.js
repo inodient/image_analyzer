@@ -30,23 +30,6 @@ exports.getFailureList = function( connection ){
 	} );
 }
 
-exports.getFailure = function( fail_id, connection ){
-	return new Promise( function(resolve, reject){
-		var params = [];
-		var queryId = "getFailure";
-
-		params.push( {"ID" : fail_id} );
-
-		mssqlHandler.executeQuery( queryId, params, connection.mssqlConnection )
-		.then( function(queryResults){
-			resolve( queryResults );
-		} )
-		.catch( function(err){
-			logger.error( err );
-			reject( err );
-		} );
-	} );
-}
 
 
 
@@ -102,6 +85,33 @@ exports.getRealImageName = function( form, connection ){
 	} );
 }
 
+exports.updateRGB = function( fileName, rgb, connection ){
+	return new Promise( function(resolve, reject){
+
+		var params = [];
+		var queryId = "updateRGB";
+
+		logger.debug( rgb.rdata );
+
+		params.push( {"ORIGINALFILENAME": fileName } );
+		params.push( {"RHIST": rgb.rhist } );
+		params.push( {"GHIST": rgb.ghist } );
+		params.push( {"BHIST": rgb.bhist } );
+		params.push( {"RDATA": rgb.rdata } );
+		params.push( {"GDATA": rgb.gdata } );
+		params.push( {"BDATA": rgb.bdata } );
+
+
+		mysqlHandler.executeQuery( queryId, params, connection )
+		.then( function(queryResults){
+			resolve( queryResults );
+		} )
+		.catch( function(err){
+			reject( err );
+		} );
+	} );
+}
+
 exports.getList = function( req, connection ){
 	return new Promise( function(resolve, reject){
 
@@ -118,6 +128,25 @@ exports.getList = function( req, connection ){
 		} );
 	} );
 }
+
+exports.getReport = function( reportId, connection ){
+	return new Promise( function(resolve, reject){
+		var params = [];
+		var queryId = "getReport";
+
+		params.push( {"ID" : reportId} );
+
+		mysqlHandler.executeQuery( queryId, params, connection )
+		.then( function(queryResults){
+			resolve( queryResults.results );
+		} )
+		.catch( function(err){
+			logger.error( err );
+			reject( err );
+		} );
+	} );
+}
+
 
 
 

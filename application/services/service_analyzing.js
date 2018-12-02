@@ -16,26 +16,6 @@ exports.getModelList = function( req, res, connection ){
 	} );
 }
 
-exports.getFailure = function( req, res, connection ){
-	return new Promise( function(resolve, reject){
-
-		var fail_id = req.params.id;
-
-		failureDbExecutor.getFailure( fail_id, connection )
-		.then( function( queryResults ){
-			var res = queryResults.results.recordset;
-
-			res[0].CREATE_DATE = ( (res[0].CREATE_DATE).toISOString() ).split("T")[0];
-			
-			resolve( (queryResults.results.recordset)[0] );
-		} )
-		.catch( function(err){
-			reject( err );
-		} );
-	} );
-}
-
-
 
 
 
@@ -48,7 +28,8 @@ exports.saveContents = function( req, res, connection ){
 
 		analyzingDbExecutor.insertContents( req.body, connection )
 		.then( function( results ){
-			resolve( {} );
+
+			resolve( results.results.insertId );
 		} )
 		.catch( function(err){
 			reject( err );
@@ -62,27 +43,85 @@ exports.extractRGB = function( req, res, connection ){
 		analyzingDbExecutor.getRealImageName( req.body, connection )
 		.then( function( results ){
 
-			var fileName = results.results[0].savedFileName
+			var fileName = results.results[0].savedFileName;
+			var originalFileName = results.results[0].originalFileName;
 			var filePath = require("path").join( process.cwd(), "upload", "template", "image", fileName );
 
-			logger.debug( filePath );
+			var fileId = results.results[0].id;
 
-			var Jimp = require('jimp');
+			countRGB( filePath )
+			.then( function(res){
 
-			Jimp.read(filePath, function (err, image) {
+				analyzingDbExecutor.updateRGB(originalFileName, res )
+				.then( function( res ){
 
-				for( var i=0; i<image.bitmap.width; i++ ){
-					for( var j=0; j<image.bitmap.height; j++ ){
+					resolve( res );
+				} )
+				.catch( function(err){
+					reject( err );
+				} );
+				
+			} )
+			.catch( function(err){
+				reject( err );
+			} );
+		} )
+		.catch( function(err){
+			reject( err );
+		} );
+	} );
+}
 
-						// logger.debug( Jimp.intToRGBA( image.getPixelColor(i, j) ) );
-						
+function countRGB( filePath, fileId ){
+	return new Promise( function(resolve, reject){
 
+		var Jimp = require('jimp');
 
-					}
+		Jimp.read(filePath, function (err, image) {
+
+			var rhist = new Array();
+			var ghist = new Array();
+			var bhist = new Array();
+
+			var rData = new Array();
+			var gData = new Array();
+			var bData = new Array();
+
+			for( var i=0; i<256; i++ ){
+				rhist.push(0);
+				ghist.push(0);
+				bhist.push(0);
+			}
+
+			for( var i=0; i<image.bitmap.width; i++ ){
+				for( var j=0; j<image.bitmap.height; j++ ){
+
+					var rgbObj = Jimp.intToRGBA( image.getPixelColor(i, j) );
+
+					rhist[rgbObj.r]++;
+					ghist[rgbObj.g]++;
+					bhist[rgbObj.b]++;
+
+					rData.push(rgbObj.r);
+					gData.push(rgbObj.g);
+					bData.push(rgbObj.b);
 				}
-			});
+			}
 
-			resolve( {} );
+			resolve( {"rhist" : rhist, "ghist" : ghist, "bhist" : bhist, "rdata" : rData.toString(), "gdata" : gData.toString(), "bdata" : bData.toString()} );
+
+		})
+
+	} );
+}
+
+function updateRGB( originalFileName, rgb ){
+	return new Promise( function(resolve, reject){
+
+		analyzingDbExecutor.updateRGB( originalFileName, rgb, connection )
+		.then( function(){
+			resolve( rgb );
+			// resolve( {"rhist" : rhist, "ghist" : ghist, "bhist" : bhist} );
 		} )
 		.catch( function(err){
 			reject( err );
@@ -103,6 +142,22 @@ exports.getList = function( req, res, connection ){
 	} );
 }
 
+exports.getReport = function( req, res, connection ){
+	return new Promise( function(resolve, reject){
+
+		var reportId = req.params.id;
+
+		analyzingDbExecutor.getReport( reportId, connection )
+		.then( function( queryResults ){
+			var res = queryResults;
+
+			resolve( queryResults );
+		} )
+		.catch( function(err){
+			reject( err );
+		} );
+	} );
+}
 
 
 

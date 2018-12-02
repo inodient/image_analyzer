@@ -7,187 +7,20 @@
 
 	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 	
+
+	<link rel="stylesheet" href="/image.css">
+
 	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
 	<meta charset="utf-8">
 	<meta name="viewport"
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-
-	<style>
-
-		body {
-			
-		}
-
-
-		.content-header {
-			padding: 10px;
-			font-size: 1.25rem;
-			text-align: center;
-			color: white;
-			background-color: #328893;
-		}
-
-		.content-header .row {
-			margin: auto;
-			max-width: 1000px;
-		}
-
-		.content-header .left-nav {
-			padding-left: 0;
-			text-align: left;
-		}
-
-		.content-header .right-nav {
-			padding-right: 0;
-			text-align: right;
-		}
-
-		.content-header a {
-			font-size: 1.25rem;
-			color: white;
-			text-decoration: none;
-		}
-
-		.content-header a:hover {
-			font-weight: 700;
-			text-decoration: none;
-		}		
-
-		.failure-form {
-			max-width: 1000px;
-			margin-left: auto;
-			margin-right: auto;
-			background-color: white;
-			margin-top: 80px;
-		}
-
-		.failure-form .assign-button-group {
-			text-align: right;
-			margin-bottom: 20px;
-		}
-
-		.failure-form .assign-button-group input[type=button] {
-			background-color: #296f79;
-			border: 0;
-			outline: none;
-			color: white;
-			font-size: 1.25rem;
-			font-weight: 700;
-			padding: 8px;
-			border-radius: 0;
-		}
-
-		.failure-form .assign-button-group input[type=button]:hover {
-			background-color: #5b949b;
-		}
-
-		.failure-form table {
-			font-size: 1.1rem;
-		}
-
-		.failure-form table .td-title {
-			width: 20%;
-			vertical-align: middle;
-			text-align: center;
-			font-weight: bold;
-			padding: 6px 12px 6px 12px;
-			height: 34px;
-			background-color: #f3f8f8;
-		}
-		.failure-form table .td-content {
-			width: 30%;
-			vertical-align: middle;
-			text-align: center;
-			font-weight: bold;
-			height: 34px;
-		}
-
-		.failure-form table input {
-			padding: 6px 12px 6px 12px;
-			height: 34px;
-			border: 1px solid lightgray;
-			width: 100%;
-			border-radius: 0 !important;
-			-webkit-appearance: none;
-		}
-
-		.failure-form table .model-selector {
-			padding: 6px 12px 6px 12px;
-			height: 34px;
-			border: 1px solid lightgray;
-			width: 100%;
-			border-radius: 0 !important;
-		}
-
-		.failure-form img {
-			width: 100%;
-		}
-
-		.failure-form textarea {
-			padding: 6px 12px 6px 12px;
-			border: 1px solid lightgray;
-			width: 100%;
-			border-radius: 0 !important;
-			-webkit-appearance: none;
-		}
-
-		footer {
-			padding: 30px;
-			font-size: 1.25rem;
-			text-align: center;
-			color: white;
-			background-color: #328893;
-		}
-
-		.navbar-toggle {
-			border: 1px solid #328893;
-			padding: 4px;
-			margin-right: 0px;
-		}
-
-		.icon-bar {
-			background-color: white;
-		}
-
-		.navbar-item a {
-			text-decoration: none;
-			color: #04313a;
-		}
-
-		.navbar-item.active {
-			font-weight: 800;
-		}
-
-	
-	</style>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 	<script>
 		$(document).ready( function(){
 
 
-			// Login Session Check - Start
-    		var loginCheck = {
-    			type: "POST",
-    			url: "/authcheck",
-    			data: null,
-
-    			success: function(results){
-    				if( results && results === "E" ){
-    					alert( "You must login this system for assigning failures." );
-    					$(location).attr( "href", "/" );
-    				}
-    			},
-    			error: function(error){
-    				alert( "An error occured.\nPlease contact administrator." );
-    			}
-    		}
-
-    		$.ajax( loginCheck );
-    		// Login Session Check - End
-
-
-			
 			$("#btn-list").on( "click", function(){
 				$(location).attr( "href", "/list" );
 			} );
@@ -216,31 +49,149 @@
 			$("#sign-out").on( "click", function(){
 		    	$(location).attr( "href", "/" );
 		    } );
+
+
+
+
+
+
+
+
+
+
+		    // google chart - start
+		    google.charts.load("current", {packages:["corechart"]});
+			google.charts.setOnLoadCallback(drawChart);
+			function drawChart() {
+			  
+				var rdata = "<%- history.RDATA %>";
+				var gdata = "<%- history.GDATA %>";
+				var bdata = "<%- history.BDATA %>";
+
+				var rdataList = rdata.split(",");
+				var gdataList = gdata.split(",");
+				var bdataList = bdata.split(",");
+
+				var rChartList = [];
+				rChartList.push(['red']);
+
+				var gChartList = [];
+				gChartList.push(['green']);
+
+				var bChartList = [];
+				bChartList.push(['blue']);
+
+				for( var i=0; i<rdataList.length; i++ ){
+					var temp = [];
+					temp.push( parseInt(rdataList[i]) );
+					rChartList.push( temp );
+				}
+
+				for( var i=0; i<gdataList.length; i++ ){
+					var temp = [];
+					temp.push( parseInt(gdataList[i]) );
+					gChartList.push( temp );
+				}
+
+				for( var i=0; i<bdataList.length; i++ ){
+					var temp = [];
+					temp.push( parseInt(bdataList[i]) );
+					bChartList.push( temp );
+				}
+
+				var dataR = google.visualization.arrayToDataTable( rChartList );
+				var dataG = google.visualization.arrayToDataTable( gChartList );
+				var dataB = google.visualization.arrayToDataTable( bChartList );
+
+		        var optionsR = {
+		          title: 'RED',
+		          legend: { position: 'none' },
+		          histogram: { bucketSize: 3 },
+		          colors: ['red'],
+		          hAxis: {
+				      ticks: [0, 50, 100, 150, 200, 250]
+				    },
+		        };
+		        var chartR = new google.visualization.Histogram(document.getElementById('chart_div_red'));
+		        chartR.draw(dataR, optionsR);
+
+		        var optionsG = {
+		          title: 'GREEN',
+		          legend: { position: 'none' },
+		          histogram: { bucketSize: 1.5 },
+		          colors: ['green'],
+		          hAxis: {
+				      ticks: [0, 50, 100, 150, 200, 250]
+				    },
+		        };
+		        var chartG = new google.visualization.Histogram(document.getElementById('chart_div_green'));
+		        chartG.draw(dataG, optionsG);
+
+		        var optionsB = {
+		          title: 'BLUE',
+		          legend: { position: 'none' },
+		          histogram: { bucketSize: 1.5 },
+		          colors: ['blue'],
+		          hAxis: {
+				      ticks: [0, 50, 100, 150, 200, 250]
+				    },
+		        };
+		        var chartB = new google.visualization.Histogram(document.getElementById('chart_div_blue'));
+		        chartB.draw(dataB, optionsB);
+			}
+		    // google chart - end
+
+
+
+
+
+
+
+
+
+
+
+
+
+			// Merged Histogram - Start
+			var rhist = "<%- history.RHIST %>";
+			var ghist = "<%- history.GHIST %>";
+			var bhist = "<%- history.BHIST %>";
+
+			var rhistList = rhist.split(",");
+			var ghistList = ghist.split(",");
+			var bhistList = bhist.split(",");
+
+			var ctx = $("#colorhistcanvas")[0].getContext("2d");
+		    
+		    var rmax = Math.max.apply(null, rhistList);
+		    var bmax = Math.max.apply(null, ghistList);
+		    var gmax = Math.max.apply(null, bhistList);
+
+		    function colorbars(ctx, max, vals, color, y) {
+		      ctx.fillStyle = color;
+		      jQuery.each(vals, function(i,x) {
+		        var pct = (vals[i] / max) * 150;
+		        ctx.fillRect(i, y, 1.5, -Math.round(pct));
+		      });
+		    }
+		    colorbars(ctx, rmax, rhistList, "rgb(255,0,0)", 150);
+		    colorbars(ctx, gmax, ghistList, "rgb(0,255,0)", 150);
+		    colorbars(ctx, bmax, bhistList, "rgb(0,0,255)", 150);
+		    // Merged Histogram - End
+
+
+
+
+
 		} );
 	</script>
 
 	<title>RGT MOBILE</title>
 </head>
 <body>
-	<!-- <div class="content-header">
-		<div class="row">
-			<div class="container-fluid">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 left-nav">
-					<a href="/list"><span class="glyphicon glyphicon-menu-left	
-"></span>&nbsp;&nbsp;LIST</a>
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-					<a href="">FAILURE</a>
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 right-nav">
-					<a href="/">LOGOUT&nbsp;&nbsp;<span class="glyphicon glyphicon-menu-right	
-"></span></a>
-				</div>
-			</div>
-		</div>
-	</div> -->
-
-	<nav class="navbar navbar-fixed-top" style="background-color: #328893">
+	
+	<nav class="navbar navbar-fixed-top">
 	  <div class="container-fluid">
 	    <div class="navbar-header">
 	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="float: left; margin-left: 8px">
@@ -267,65 +218,46 @@
 	</nav>
 
 	<form id="failure-form" class="failure-form" name="failure-form" method="post" action="/savefailure
-	" data-failure-id="<%- failure.ID %>">
-		
-		<div class="container-fluid">
-			<table class="table table-responsive table-bordered" style="margin-bottom: 35px">
+	" data-failure-id="<%- history.id %>">
+		    
+    	<div class="container-fluid">
+			<table class="table table-responsive table-bordered report-table">
 				<tbody>
+					<tr><th><h4 style="font-weight: bold"><%- history.TITLE %></h4></th></tr>
+					<tr><td class="before-line"><%- history.CREATED_DATE %> | <%- history.OWNER %></td></tr>
+					<tr><td><img style="margin-bottom: 30px" src="/<%- history.savedFileName %>"  style="width:100%"></td></tr>
+					
+
 					<tr>
-						<td class="td-title">NAME</td>
-						<td colspan=3 class="td-content">
-							<span><%- failure.NAME %></span>
+						<td>
+							<div id="chart_div_red" style="width: 100%; height: 100%;"></div>
+							<div id="chart_div_green" style="width: 100%; height: 100%;"></div>
+							<div id="chart_div_blue" style="width: 100%; height: 100%;"></div>
 						</td>
 					</tr>
 
-					<tr>
-						<td class="td-title">MODEL ID</td>
-						<td class="td-content">
-							<span><%- failure.NAME %></span>
-						</td>
-						<td class="td-title">PRJ NO</td>
-						<td class="td-content">
-							<span><%- failure.PRJ %></span>
-						</td>
-					</tr>
-					<tr>
-						<td class="td-title">PHASE</td>
-						<td class="td-content">
-							<span><%- failure.PHASE %></span>
-						</td>
-						<td class="td-title">SERIAL</td>
-						<td class="td-content">
-							<span><%- failure.SERIAL %></span>
-						</td>
-					</tr>
+
+
+					<tr><th>RED</th></tr>
+
+					<tr><td><div id="chart_div_red" style="width: 100%; height: 100%;"></div></td></tr>
+					<tr><th>GREEN</th></tr>
+					<tr><td><div id="chart_div_green" style="width: 100%; height: 100%;"></div></td></tr>
+					<tr><th>BLUE</th></tr>
+					<tr><td><div id="chart_div_blue" style="width: 100%; height: 100%;"></div></td></tr>
+					<tr><th>COLOR MERGE</th></tr>
+					<tr><td style="text-align: center"><canvas id="colorhistcanvas"></canvas></td></tr>
+					
+					<tr><td><%- history.DESCRIPTION %></td></tr>
+					<tr><th>asdfasdfasdf</th></tr>
 				</tbody>
 			</table>
 
-			<table class="table table-responsive table-bordered">
-				<tbody>
-					<tr>
-						<td class="td-title">IMAGE</td>
-					</tr>
-					<tr>
-						<td>
-							<img src="<%- '/' + failure.SAVEDFILENAME %>" id="failure-image">
-						</td>
-					</tr>
-					<tr>
-						<td class="td-title">FAILURE CONTENT</td>
-					</tr>
-					<tr>
-						<td>
-							<span><%- failure.FAILURE %></span>
-						</td>
-					</tr>
-				</tbody>
-			</table>
+
 		</div>
 
 		<div class="container-fluid assign-button-group" style="text-align:center">
-			<input style="width: 48%" type="button" value="DELETE" id="btn-del" data-failure-id="<%- failure.ID %>" />
+			<input style="width: 48%" type="button" value="DELETE" id="btn-del" data-failure-id="<%- history.ID %>" />
 			<input style="width: 48%" type="button" value="BACK TO LIST" id="btn-list" />
 		</div>
 	</form>

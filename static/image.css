@@ -75,6 +75,11 @@
       background-color: #282921;
     }
 
+
+    .report-table, .report-table *, .report-table tbody *, .report-table tbody tr, .report-table tbody tr th, .report-table tbody tr td{
+      border: 0px;
+    }
+
     .failure-form table {
       font-size: 1.1rem;
     }

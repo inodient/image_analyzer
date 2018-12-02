@@ -18,9 +18,9 @@
         },
         {
             "id": "report",
-            "path": "/report",
+            "path": "/report/:id",
             "controllerJS": "controller_analyzing.js",
-            "controlFunction": "control_list",
+            "controlFunction": "control_view_report",
             "viewPath": "",
             "view": "report.ejs"
         },

@@ -101,7 +101,13 @@
 
   <query id='getRealImageName'>
     <![CDATA[
-      select savedFileName from TB_OIL_IMAGE where originalFileName like #IMAGE#
+      select id, originalFileName, savedFileName from TB_OIL_IMAGE where originalFileName like #IMAGE#
+    ]]>
+  </query>
+
+  <query id='updateRGB'>
+    <![CDATA[
+      update TB_OIL_IMAGE set rhist = #RHIST#, ghist = #GHIST#, bhist = #BHIST#, rdata = #RDATA#, gdata = #GDATA#, bdata = #BDATA# where originalFileName = #ORIGINALFILENAME#
     ]]>
   </query>
 
@@ -129,6 +135,39 @@
         WHERE A.IMAGE_ID = B.ID
         ORDER BY id DESC
         LIMIT 20
+    ]]>
+  </query>
+
+  <query id='getReport'>
+    <![CDATA[
+      SELECT A.id, 
+             A.TITLE, 
+             A.MACHINE_MODEL, 
+             A.IMAGE_ID, 
+             A.OIL_NAME, 
+             A.OWNER, 
+             A.DESCRIPTION, 
+             A.RED_VALUE, 
+             A.BLUE_VALUE, 
+             A.GREEN_VALUE, 
+             A.RED_FWHM, 
+             A.BLUE_FWHM, 
+             A.GREEN_FWHM, 
+             A.DECISION, 
+             A.OPINION, 
+             A.CREATED_DATE,
+             B.originalFileName,
+             B.savedFileName,
+             B.RHIST,
+             B.GHIST,
+             B.BHIST,
+             B.RDATA,
+             B.GDATA,
+             B.BDATA
+        FROM TB_HISTORY A, TB_OIL_IMAGE B 
+        WHERE A.id = #ID#
+          AND A.IMAGE_ID = B.ID
+        ORDER BY id DESC
     ]]>
   </query>
 

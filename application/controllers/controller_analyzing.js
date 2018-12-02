@@ -15,12 +15,14 @@ exports.control_analyzing = function( req, res, connection ){
 
 		Promise.all( promises )
 		.then( function(){
-			resolve( {} );
+
+			var argv = arguments[0];
+
+			resolve( {"id":argv[0]} );
 		} )
 		.catch( function(err){
 			reject( err );
 		} );
-
 
 	} );
 }
@@ -32,8 +34,6 @@ exports.control_list = function( req, res, connection ){
 			// logger.debug( results );
 
 			for( var i=0; i<results.length; i++ ){
-
-				logger.debug( results[i].CREATED_DATE );
 
 				if( results[i].CREATED_DATE ){
 					results[i].CREATED_DATE = ( results[i].CREATED_DATE ).toISOString().split("T")[0]
@@ -48,25 +48,40 @@ exports.control_list = function( req, res, connection ){
 	} );
 }
 
-
-
-
-
-
-
-
-
-exports.control_view_failure = function( req, res, connection ){
+exports.control_view_report = function( req, res, connection ){
 	return new Promise( function( resolve, reject ){
-		failureService.getFailure( req, res, connection )
+
+		analyzingService.getReport( req, res, connection )
 		.then( function( results ){
-			resolve( {"list" : results} );
+
+			for( var i=0; i<results.length; i++ ){
+
+				if( results[i].CREATED_DATE ){
+					results[i].CREATED_DATE = ( results[i].CREATED_DATE ).toISOString().split("T")[0]
+				}
+			}
+
+			logger.debug( results[0] );
+
+			resolve( {"history":results[0]} );
 		} )
 		.catch( function(err){
 			reject( err );
 		} );
 	} );
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 exports.control_del_failure = function( req, res, connection ){
 	return new Promise( function( resolve, reject ){
