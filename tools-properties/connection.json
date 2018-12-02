@@ -1,8 +1,8 @@
 {
 	"session-setting" : {
-		"enable-redis-store" : true,
-		"enable-custom-id-generator" : true,
-		"enable-custom-name" : true
+		"enable-redis-store" : false,
+		"enable-custom-id-generator" : false,
+		"enable-custom-name" : false
 	},
 	"session-info" : {
 		"secret" : "a;slkjf;alkjsd;foiqnw;jbnf;kajbsd;kfjasdh",
