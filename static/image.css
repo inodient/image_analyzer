@@ -3,9 +3,9 @@
     }
 
     .row {
-      background-color: #328893; 
+      background-color: #333; 
       color: #ededed;
-      border-bottom: 1px solid #328893;
+      border-bottom: 1px solid #333;
       padding: 10px;
     }
 
@@ -265,3 +265,85 @@
     .navbar-item.active {
       font-weight: 800;
     }
+
+
+
+
+
+
+
+
+
+    .login-form {
+      padding: 5rem;
+      font-size: 1.5rem;
+      height: 100%;
+      vertical-align: middle;
+    }
+
+    .col-md-4.login-form {
+      /*padding: 10rem;*/
+    }
+
+    .login-form table {
+      margin: auto;
+      margin-top: 10px;
+      width: 100%;
+      background-color: #333;
+    }
+
+    .login-form table tr {
+      margin: auto;
+      padding: 10px;
+      width: 100%;
+      border: 1px solid white;
+    }
+
+    .login-form table tr td {
+      margin: auto;
+      padding: 10px;
+      width: 100%;
+    }
+
+    .login-form table tr td input {
+      margin: auto;
+      width: 100%;
+      border: 0px;
+      color: white;
+      background-color: #333;  
+    }
+
+
+    .login-form table tr td input::placeholder {
+      color: white;
+    }
+
+    .submit-tr {
+      background-color: #ffffff;
+    }
+
+    .submit-tr td {
+      padding: 0px !important;
+    }
+
+    .submit-tr input {
+      padding: 10px;
+      background-color: #ffffff !important;
+      border: 0px !important;
+      color: #333 !important;
+    }
+
+    .submit-tr #btn-submit::hover {
+      background-color: #555 !important;
+    }
+
+    input:focus {
+      /*box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);*/
+      outline: none;
+    }
+
+    input[type=button] {
+      background-color: white;
+    }
+
+  

@@ -159,26 +159,33 @@ exports.getReport = function( req, res, connection ){
 	} );
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-exports.deleteFailure = function( req, res, connection ){
+exports.deleteReport = function( req, res, connection ){
 	return new Promise( function( resolve, reject ){
 
-		failureDbExecutor.deleteFailure( req.body, connection )
+		analyzingDbExecutor.deleteReport( req.body.targetId, connection )
 		.then( function( results ){
 			// logger.debug( results );
 			resolve( {} );
+		} )
+		.catch( function(err){
+			reject( err );
+		} );
+	} );
+}
+
+exports.authCheck = function( req, res, connection ){
+	return new Promise( function( resolve, reject ){
+
+		analyzingDbExecutor.authCheck( req, connection )
+		.then( function( results ){
+
+			logger.debug( results );
+
+			if( results.results.length ){
+				resolve( {"STATUS":"S"} );
+			} else {
+				resolve( {"STATUS":"E"} );
+			}
 		} )
 		.catch( function(err){
 			reject( err );

@@ -1,12 +1,12 @@
 {
     "GET": [
         {
-            "id": "dsahboard",
+            "id": "login",
             "path": "/",
             "controllerJS": "controller_basic.js",
             "controlFunction": "control",
             "viewPath": "",
-            "view": "dashboard.ejs"
+            "view": "login.ejs"
         },
         {
             "id": "list",
@@ -24,6 +24,20 @@
             "viewPath": "",
             "view": "report.ejs"
         },
+        {
+            "id": "setting",
+            "path": "/setting",
+            "controllerJS": "controller_basic.js",
+            "controlFunction": "control",
+            "viewPath": "",
+            "view": "setting.ejs"
+        },
+
+
+
+
+
+
         {
             "id": "analyzing",
             "path": "/analyzing",
@@ -146,6 +160,22 @@
             "controlFunction": "control_analyzing",
             "viewPath": "",
             "view": "list.ejs"
+        },
+        {
+            "id": "delreport",
+            "path": "/delreport",
+            "controllerJS": "controller_analyzing.js",
+            "controlFunction": "control_del_report",
+            "viewPath": "",
+            "view": ""
+        },
+        {
+            "id": "authcheck",
+            "path": "/authcheck",
+            "controllerJS": "controller_analyzing.js",
+            "controlFunction": "control_auth",
+            "viewPath": "",
+            "view": ""
         }
     ]
 }

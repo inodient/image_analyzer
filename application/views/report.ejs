@@ -26,12 +26,12 @@
 			} );
 
 			$("#btn-del").on( "click", function(){
-				if( confirm( "Are you sure to want to delete this failure?") ){
-		    		var targetId = $(this).data( "failure-id");
+				if( confirm( "Are you sure to want to delete this report?") ){
+		    		var targetId = $(this).data( "report-id");
 
 			    	var opt = {
 						type: "POST",
-						url: "/delfailure",
+						url: "/delreport",
 						data: {targetId : targetId},
 
 						success: function( data ){
@@ -187,7 +187,7 @@
 		} );
 	</script>
 
-	<title>RGT MOBILE</title>
+	<title>OIL ANALYZER</title>
 </head>
 <body>
 	
@@ -206,12 +206,10 @@
 	    <div class="collapse navbar-collapse" id="myNavbar" style="background-color: white; color: #04313a">
 	      <ul class="nav navbar-nav">
 	        <li class="navbar-item"><a href="/list" class="site-nav-menu" id="1" name="List" data-href="/list">List</a></li>
-          	<li class="navbar-item"><a href="/assign" class="site-nav-menu" id="1" name="Assign Failure" data-href="/assign">Assign Failure</a></li>
-          	<li class="navbar-item"><a href="/machine" class="site-nav-menu" id="1" name="Machine Info" data-href="/machine">Machine Info</a></li>
+          	<li class="navbar-item active"><a href="/analyzing" class="site-nav-menu" id="1" name="Assign Failure" data-href="/analyzing">Analyze</a></li>
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right">
 	      	<li class="navbar-item"><a href="/setting" class="site-nav-menu" id="1" name="Setting" data-href="/setting">Setting</a></li>
-	        <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
 	      </ul>
 	    </div>
 	  </div>
@@ -226,8 +224,7 @@
 					<tr><th><h4 style="font-weight: bold"><%- history.TITLE %></h4></th></tr>
 					<tr><td class="before-line"><%- history.CREATED_DATE %> | <%- history.OWNER %></td></tr>
 					<tr><td><img style="margin-bottom: 30px" src="/<%- history.savedFileName %>"  style="width:100%"></td></tr>
-					
-
+					<tr><th class="before-line">HISTOGRAM</th></tr>
 					<tr>
 						<td>
 							<div id="chart_div_red" style="width: 100%; height: 100%;"></div>
@@ -236,20 +233,15 @@
 						</td>
 					</tr>
 
-
-
-					<tr><th>RED</th></tr>
-
-					<tr><td><div id="chart_div_red" style="width: 100%; height: 100%;"></div></td></tr>
-					<tr><th>GREEN</th></tr>
-					<tr><td><div id="chart_div_green" style="width: 100%; height: 100%;"></div></td></tr>
-					<tr><th>BLUE</th></tr>
-					<tr><td><div id="chart_div_blue" style="width: 100%; height: 100%;"></div></td></tr>
-					<tr><th>COLOR MERGE</th></tr>
-					<tr><td style="text-align: center"><canvas id="colorhistcanvas"></canvas></td></tr>
+					<tr><th class="before-line">COLOR MERGE</th></tr>
+					<tr><td style="text-align: center;"><canvas id="colorhistcanvas"></canvas></td></tr>
 					
+					<tr><th></th></tr>
+					<tr><td></td></tr>
+
+					<tr><th class="before-line">DESCRIPTION</th></tr>
 					<tr><td><%- history.DESCRIPTION %></td></tr>
-					<tr><th>asdfasdfasdf</th></tr>
+
 				</tbody>
 			</table>
 
@@ -257,14 +249,14 @@
 		</div>
 
 		<div class="container-fluid assign-button-group" style="text-align:center">
-			<input style="width: 48%" type="button" value="DELETE" id="btn-del" data-failure-id="<%- history.ID %>" />
+			<input style="width: 48%" type="button" value="DELETE" id="btn-del" data-report-id="<%- history.id %>" />
 			<input style="width: 48%" type="button" value="BACK TO LIST" id="btn-list" />
 		</div>
 	</form>
 
 	<footer>
 		<p>
-			Copyright(c) 2018 Doosan Information Communication<br>
+			Copyright(c) 2018 Park Hong Gyu<br>
 			Beta-Test Version - v.0.0.1
 		</p>
 	</footer>

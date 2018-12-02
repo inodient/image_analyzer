@@ -31,11 +31,11 @@
 
 		    $(".btn-del").on( "click", function(){
 
-		    	if( confirm( "Are you sure to want to delete this failure?") ){
+		    	if( confirm( "Are you sure to want to delete this report?") ){
 		    		var targetId = $(this).data( "id");
 			    	var opt = {
 						type: "POST",
-						url: "/delfailure",
+						url: "/delreport",
 						data: {targetId : targetId},
 
 						success: function( data ){
@@ -58,7 +58,7 @@
 
 
 
-	<title>RGT MOBILE</title>
+	<title>OIL ANALYZER</title>
 </head>
 <body>
 	<nav class="navbar navbar-fixed-top" style="background-color: black">
@@ -76,12 +76,10 @@
 	    <div class="collapse navbar-collapse" id="myNavbar" style="background-color: white; color: #04313a">
 	      <ul class="nav navbar-nav">
 	        <li class="navbar-item active"><a href="/list" class="site-nav-menu" id="1" name="List" data-href="/list">List</a></li>
-          	<li class="navbar-item"><a href="/assign" class="site-nav-menu" id="1" name="Assign Failure" data-href="/analyzing">Analyze</a></li>
-          	<li class="navbar-item"><a href="/machine" class="site-nav-menu" id="1" name="Machine Info" data-href="/machine">Machine Info</a></li>
+          	<li class="navbar-item"><a href="/analyzing" class="site-nav-menu" id="1" name="Assign Failure" data-href="/analyzing">Analyze</a></li>
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right">
 	      	<li class="navbar-item"><a href="/setting" class="site-nav-menu" id="1" name="Setting" data-href="/setting">Setting</a></li>
-	        <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
 	      </ul>
 	    </div>
 	  </div>
@@ -95,7 +93,7 @@
 
 				<% for( var i=0; i<list.length; i++ ){ %>
 
-					<article id="article_68" data-article-id="68">
+					<article id="<%- 'article_'+list[i].id %>" data-article-id="<%- list[i].id %>">
 						
 						<table class="table table-responsive">
 							<tbody>
@@ -121,8 +119,8 @@
 
 
 						<div style="margin-top: 30px;">
-							<a class="btn-view" href="/failure/68">SPECIFIC</a>
-							<a class="btn-view btn-del" id="delete_failure_68" data-id="68">DELETE</a>
+							<a class="btn-view" href="<%- '/report/' + list[i].id %>">SPECIFIC</a>
+							<a class="btn-view btn-del" id="" data-id="<%- list[i].id %>">DELETE</a>
 						</div>
 
 
@@ -135,8 +133,8 @@
 
 			<div class="row content-footer footer" style="text-align:center; padding-top:2rem">
 				<div>
-					<p style="font-size: 1.5rem;" >
-						Copyright(c) 2018 Doosan I&C<br>
+					<p>
+						Copyright(c) 2018 Park Hong Gyu<br>
 						Beta-Test Version - v.0.0.1
 					</p>
 				</div>

@@ -82,14 +82,10 @@
 
 
 			$("#btn-clear").on( "click", function(){
-				$(".model-selector").val("");
-				$("#input-model-id").val("");
-				$("#input-model-project").val("");
-				$("#input-model-phase").val("");
-				$("#input-model-serial").val("");
+				$("#input-title").val("");
 				$("#input-imagename").val("");
 				$("#failure-image").attr( "src", "/placeholder.png" );
-				$("#input-failure").val("");
+				$("#input-description").val("");
 			} );
 
 			$("#btn-cancle").on( "click", function(){
@@ -120,7 +116,7 @@
 		} );
 	</script>
 
-	<title>RGT MOBILE</title>
+	<title>OIL ANALYZER</title>
 </head>
 <body>
 
@@ -139,8 +135,7 @@
 	    <div class="collapse navbar-collapse" id="myNavbar" style="background-color: white; color: #04313a">
 	      <ul class="nav navbar-nav">
 	        <li class="navbar-item"><a href="/list" class="site-nav-menu" id="1" name="List" data-href="/list">List</a></li>
-          	<li class="navbar-item active"><a href="/assign" class="site-nav-menu" id="1" name="Assign Failure" data-href="/assign">Assign Failure</a></li>
-          	<li class="navbar-item"><a href="/machine" class="site-nav-menu" id="1" name="Machine Info" data-href="/machine">Machine Info</a></li>
+          	<li class="navbar-item active"><a href="/analyzing" class="site-nav-menu" id="1" name="Assign Failure" data-href="/analyzing">Analyze</a></li>
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right">
 	      	<li class="navbar-item"><a href="/setting" class="site-nav-menu" id="1" name="Setting" data-href="/setting">Setting</a></li>
@@ -158,7 +153,7 @@
 					<tr>
 						<td class="td-title">TITIE</td>
 						<td colspan=3>
-							<input type="text" name="input-title" />
+							<input type="text" id="input-title" name="input-title" />
 						</td>
 					</tr>
 					<tr>
@@ -185,7 +180,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td colspan=2 class="td-title">FAILURE CONTENT</td>
+						<td colspan=2 class="td-title">DESCRIPTION</td>
 					</tr>
 					<tr>
 						<td colspan=2>
@@ -205,7 +200,7 @@
 
 	<footer>
 		<p>
-			Copyright(c) 2018 Doosan Information Communication<br>
+			Copyright(c) 2018 Park Hong Gyu<br>
 			Beta-Test Version - v.0.0.1
 		</p>
 	</footer>

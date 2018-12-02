@@ -171,6 +171,14 @@
     ]]>
   </query>
 
+  <query id='deleteReport'>
+    <![CDATA[
+      DELETE FROM TB_HISTORY WHERE ID = #ID#
+    ]]>
+  </query>
+
+  
+
 
 
 
@@ -205,7 +213,11 @@
     ]]>
   </query>
 
-
+  <query id='authCheck'>
+    <![CDATA[
+      select id from TB_USER
+    ]]>
+  </query>
   
 
 

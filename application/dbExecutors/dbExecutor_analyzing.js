@@ -91,8 +91,6 @@ exports.updateRGB = function( fileName, rgb, connection ){
 		var params = [];
 		var queryId = "updateRGB";
 
-		logger.debug( rgb.rdata );
-
 		params.push( {"ORIGINALFILENAME": fileName } );
 		params.push( {"RHIST": rgb.rhist } );
 		params.push( {"GHIST": rgb.ghist } );
@@ -147,32 +145,34 @@ exports.getReport = function( reportId, connection ){
 	} );
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-exports.deleteFailure = function( failureInfo, connection ){
+exports.deleteReport = function( id, connection ){
 	return new Promise( function(resolve, reject){
 
-		var _current = new Date();
-		var current = _current.toISOString();
+		var params = [];
+		var queryId = "deleteReport"
+		params.push( {"ID": id } );
+
+		mysqlHandler.executeQuery( queryId, params, connection )
+		.then( function(queryResults){
+			resolve( queryResults );
+		} )
+		.catch( function(err){
+			logger.error( err );
+			reject( err );
+		} );
+	} );
+}
+
+exports.authCheck = function( req, connection ){
+	return new Promise( function(resolve, reject){
 
 		var params = [];
-		var queryId = "deleteFailure"
-		params.push( {"ID": failureInfo.targetId } );
+		var queryId = "authCheck";
 
-		logger.debug( failureInfo.targetId );
+		params.push( {"USER": req.body.userid } );
+		params.push( {"PASSWORD": req.body.password } );
 
-		mssqlHandler.executeQuery( queryId, params, connection.mssqlConnection )
+		mysqlHandler.executeQuery( queryId, params, connection.mysqlConnection )
 		.then( function(queryResults){
 			resolve( queryResults );
 		} )

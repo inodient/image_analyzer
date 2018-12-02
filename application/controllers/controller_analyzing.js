@@ -61,8 +61,6 @@ exports.control_view_report = function( req, res, connection ){
 				}
 			}
 
-			logger.debug( results[0] );
-
 			resolve( {"history":results[0]} );
 		} )
 		.catch( function(err){
@@ -71,22 +69,10 @@ exports.control_view_report = function( req, res, connection ){
 	} );
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-exports.control_del_failure = function( req, res, connection ){
+exports.control_del_report = function( req, res, connection ){
 	return new Promise( function( resolve, reject ){
 
-		failureService.deleteFailure( req, res, connection )
+		analyzingService.deleteReport( req, res, connection )
 		.then( function( results ){
 			resolve( {} );
 		} )
@@ -95,3 +81,25 @@ exports.control_del_failure = function( req, res, connection ){
 		} );
 	} );	
 }
+
+
+
+
+
+
+
+
+
+exports.control_auth = function( req, res, connection ){
+	return new Promise( function( resolve, reject ){
+
+		analyzingService.authCheck( req, res, connection )
+		.then( function( results ){
+			resolve( results );
+		} )
+		.catch( function(err){
+			reject( err );
+		} );
+	} );	
+}
+
