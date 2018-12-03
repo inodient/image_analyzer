@@ -103,10 +103,6 @@
 					bChartList.push( temp );
 				}
 
-				console.log( <%- history.RDATA %> );
-				console.log( <%- history.GDATA %> );
-				console.log( <%- history.BDATA %> );
-
 				var dataR = google.visualization.arrayToDataTable( rChartList );
 				var dataG = google.visualization.arrayToDataTable( gChartList );
 				var dataB = google.visualization.arrayToDataTable( bChartList );
@@ -188,8 +184,9 @@
 		    colorbars(ctx, bmax, bhistList, "rgb(0,0,255)", 150);
 		    // Merged Histogram - End
 
-
-
+		    $("#r_max").text( rmax );
+		    $("#g_max").text( gmax );
+		    $("#b_max").text( bmax );
 
 
 		} );
@@ -227,33 +224,69 @@
 	" data-failure-id="<%- history.id %>">
 		    
     	<div class="container-fluid">
+    		<table class="table table-responsive table-bordered report-table" style="margin-bottom: 70px">
+				<tbody>
+					<tr><th><h3 style="font-weight: bold"><%- history.TITLE %></h3></th></tr>
+					<tr><td class="before-line"><%- history.CREATED_DATE %> | <%- history.OWNER %></td></tr>
+					<tr><td><img src="/<%- history.savedFileName %>"  style="width:100%"></td></tr>
+					<tr><td><%- history.DESCRIPTION %></td></tr>
+				</tbody>
+			</table>
+
 			<table class="table table-responsive table-bordered report-table">
 				<tbody>
-					<tr><th><h4 style="font-weight: bold"><%- history.TITLE %></h4></th></tr>
-					<tr><td class="before-line"><%- history.CREATED_DATE %> | <%- history.OWNER %></td></tr>
-					<tr><td><img style="margin-bottom: 30px" src="/<%- history.savedFileName %>"  style="width:100%"></td></tr>
-					<tr><th class="before-line">HISTOGRAM</th></tr>
+					<tr><th><h4 class="before-line">COLOR VALUES</h4></th></tr>
+				</tbody>
+			</table>
+
+			<table class="table table-responsive table-bordered" style="margin-bottom: 70px">
+				<tbody>
+					<tr>
+						<th>COLOR</th>
+						<th>MAX</th>
+						<th>FWHM</th>
+						<th>FWHM/2</th>
+					</tr>
+					<tr>
+						<td>R</td>
+						<td><p id="r_max"></p></td>
+						<td>FWHM</td>
+						<td>FWHM/2</td>
+					</tr>
+					<tr>
+						<td>G</td>
+						<td><p id="g_max"></p></td>
+						<td>FWHM</td>
+						<td>FWHM/2</td>
+					</tr>
+					<tr>
+						<td>B</td>
+						<td><p id="b_max"></p></td>
+						<td>FWHM</td>
+						<td>FWHM/2</td>
+					</tr>
+				</tbody>
+			</table>
+
+
+			<table class="table table-responsive table-bordered report-table" style="margin-bottom: 70px">
+				<tbody>
+					<tr><th><h4 class="before-line">HISTOGRAM</h4></th></tr>
+					<tr><td style="text-align: center;"><canvas id="colorhistcanvas"></canvas></td></tr>
 					<tr>
 						<td>
 							<div id="chart_div_red" style="width: 100%; height: 100%;"></div>
 							<div id="chart_div_green" style="width: 100%; height: 100%;"></div>
 							<div id="chart_div_blue" style="width: 100%; height: 100%;"></div>
 						</td>
-					</tr>
-
-					<tr><th class="before-line">COLOR MERGE</th></tr>
-					<tr><td style="text-align: center;"><canvas id="colorhistcanvas"></canvas></td></tr>
-					
-					<tr><th></th></tr>
-					<tr><td></td></tr>
-
-					<tr><th class="before-line">DESCRIPTION</th></tr>
-					<tr><td><%- history.DESCRIPTION %></td></tr>
-
+					</tr>					
 				</tbody>
 			</table>
 
 
+			
+
+			
 		</div>
 
 		<div class="container-fluid assign-button-group" style="text-align:center">
