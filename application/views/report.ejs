@@ -60,85 +60,93 @@
 
 
 		    // google chart - start
-		 //    google.charts.load("current", {packages:["corechart"]});
-			// google.charts.setOnLoadCallback(drawChart);
-			// function drawChart() {
+		    google.charts.load("current", {packages:["corechart"]});
+			google.charts.setOnLoadCallback(drawChart);
+			function drawChart() {
 			  
-			// 	var rdata = "<%- history.RDATA %>";
-			// 	var gdata = "<%- history.GDATA %>";
-			// 	var bdata = "<%- history.BDATA %>";
+				var rdata = "<%- history.RDATA %>";
+				var gdata = "<%- history.GDATA %>";
+				var bdata = "<%- history.BDATA %>";
 
 			// 	var rdataList = rdata.split(",");
 			// 	var gdataList = gdata.split(",");
 			// 	var bdataList = bdata.split(",");
 
-			// 	var rChartList = [];
-			// 	rChartList.push(['red']);
+				var rdataList = rdata;
+				var gdataList = gdata;
+				var bdataList = bdata;
 
-			// 	var gChartList = [];
-			// 	gChartList.push(['green']);
+				var rChartList = [];
+				rChartList.push(['red']);
 
-			// 	var bChartList = [];
-			// 	bChartList.push(['blue']);
+				var gChartList = [];
+				gChartList.push(['green']);
 
-			// 	for( var i=0; i<rdataList.length; i++ ){
-			// 		var temp = [];
-			// 		temp.push( parseInt(rdataList[i]) );
-			// 		rChartList.push( temp );
-			// 	}
+				var bChartList = [];
+				bChartList.push(['blue']);
 
-			// 	for( var i=0; i<gdataList.length; i++ ){
-			// 		var temp = [];
-			// 		temp.push( parseInt(gdataList[i]) );
-			// 		gChartList.push( temp );
-			// 	}
+				for( var i=0; i<rdataList.length; i++ ){
+					var temp = [];
+					temp.push( parseInt(rdataList[i]) );
+					rChartList.push( temp );
+				}
 
-			// 	for( var i=0; i<bdataList.length; i++ ){
-			// 		var temp = [];
-			// 		temp.push( parseInt(bdataList[i]) );
-			// 		bChartList.push( temp );
-			// 	}
+				for( var i=0; i<gdataList.length; i++ ){
+					var temp = [];
+					temp.push( parseInt(gdataList[i]) );
+					gChartList.push( temp );
+				}
 
-			// 	var dataR = google.visualization.arrayToDataTable( rChartList );
-			// 	var dataG = google.visualization.arrayToDataTable( gChartList );
-			// 	var dataB = google.visualization.arrayToDataTable( bChartList );
+				for( var i=0; i<bdataList.length; i++ ){
+					var temp = [];
+					temp.push( parseInt(bdataList[i]) );
+					bChartList.push( temp );
+				}
 
-		 //        var optionsR = {
-		 //          title: 'RED',
-		 //          legend: { position: 'none' },
-		 //          histogram: { bucketSize: 3 },
-		 //          colors: ['red'],
-		 //          hAxis: {
-			// 	      ticks: [0, 50, 100, 150, 200, 250]
-			// 	    },
-		 //        };
-		 //        var chartR = new google.visualization.Histogram(document.getElementById('chart_div_red'));
-		 //        chartR.draw(dataR, optionsR);
+				console.log( <%- history.RDATA %> );
+				console.log( <%- history.GDATA %> );
+				console.log( <%- history.BDATA %> );
 
-		 //        var optionsG = {
-		 //          title: 'GREEN',
-		 //          legend: { position: 'none' },
-		 //          histogram: { bucketSize: 1.5 },
-		 //          colors: ['green'],
-		 //          hAxis: {
-			// 	      ticks: [0, 50, 100, 150, 200, 250]
-			// 	    },
-		 //        };
-		 //        var chartG = new google.visualization.Histogram(document.getElementById('chart_div_green'));
-		 //        chartG.draw(dataG, optionsG);
+				var dataR = google.visualization.arrayToDataTable( rChartList );
+				var dataG = google.visualization.arrayToDataTable( gChartList );
+				var dataB = google.visualization.arrayToDataTable( bChartList );
 
-		 //        var optionsB = {
-		 //          title: 'BLUE',
-		 //          legend: { position: 'none' },
-		 //          histogram: { bucketSize: 1.5 },
-		 //          colors: ['blue'],
-		 //          hAxis: {
-			// 	      ticks: [0, 50, 100, 150, 200, 250]
-			// 	    },
-		 //        };
-		 //        var chartB = new google.visualization.Histogram(document.getElementById('chart_div_blue'));
-		 //        chartB.draw(dataB, optionsB);
-			// }
+		        var optionsR = {
+		          title: 'RED',
+		          legend: { position: 'none' },
+		          histogram: { bucketSize: 0.3 },
+		          colors: ['red'],
+		          hAxis: {
+				      ticks: [0, 50, 100, 150, 200, 250]
+				    },
+		        };
+		        var chartR = new google.visualization.Histogram(document.getElementById('chart_div_red'));
+		        chartR.draw(dataR, optionsR);
+
+		        var optionsG = {
+		          title: 'GREEN',
+		          legend: { position: 'none' },
+		          histogram: { bucketSize: 0.3 },
+		          colors: ['green'],
+		          hAxis: {
+				      ticks: [0, 50, 100, 150, 200, 250]
+				    },
+		        };
+		        var chartG = new google.visualization.Histogram(document.getElementById('chart_div_green'));
+		        chartG.draw(dataG, optionsG);
+
+		        var optionsB = {
+		          title: 'BLUE',
+		          legend: { position: 'none' },
+		          histogram: { bucketSize: 0.3 },
+		          colors: ['blue'],
+		          hAxis: {
+				      ticks: [0, 50, 100, 150, 200, 250]
+				    },
+		        };
+		        var chartB = new google.visualization.Histogram(document.getElementById('chart_div_blue'));
+		        chartB.draw(dataB, optionsB);
+			}
 		    // google chart - end
 
 
@@ -224,14 +232,14 @@
 					<tr><th><h4 style="font-weight: bold"><%- history.TITLE %></h4></th></tr>
 					<tr><td class="before-line"><%- history.CREATED_DATE %> | <%- history.OWNER %></td></tr>
 					<tr><td><img style="margin-bottom: 30px" src="/<%- history.savedFileName %>"  style="width:100%"></td></tr>
-					<!-- <tr><th class="before-line">HISTOGRAM</th></tr>
+					<tr><th class="before-line">HISTOGRAM</th></tr>
 					<tr>
 						<td>
 							<div id="chart_div_red" style="width: 100%; height: 100%;"></div>
 							<div id="chart_div_green" style="width: 100%; height: 100%;"></div>
 							<div id="chart_div_blue" style="width: 100%; height: 100%;"></div>
 						</td>
-					</tr> -->
+					</tr>
 
 					<tr><th class="before-line">COLOR MERGE</th></tr>
 					<tr><td style="text-align: center;"><canvas id="colorhistcanvas"></canvas></td></tr>

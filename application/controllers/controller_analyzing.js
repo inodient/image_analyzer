@@ -61,6 +61,65 @@ exports.control_view_report = function( req, res, connection ){
 				}
 			}
 
+			// logger.debug( results[0] );
+			var rhist = (results[0].RHIST).toString().split(",");
+			var ghist = (results[0].GHIST).toString().split(",");
+			var bhist = (results[0].BHIST).toString().split(",");
+
+			var rhistPressed = [];
+			var ghistPressed = [];
+			var bhistPressed = [];
+
+
+			var rdata = [];
+			var gdata = [];
+			var bdata = [];
+
+
+			for( var i=0; i<rhist.length; i++ ){
+				rhistPressed.push( Math.ceil(rhist[i] / 50) );
+			}
+			for( var i=0; i<ghist.length; i++ ){
+				ghistPressed.push( Math.ceil(ghist[i] / 50) );
+			}
+			for( var i=0; i<bhist.length; i++ ){
+				bhistPressed.push( Math.ceil(bhist[i] / 50) );
+			}
+
+			for( var i=0; i<rhistPressed.length; i++ ){
+				var pressed = parseInt( rhistPressed[i] );
+
+				for( var j=0; j<pressed; j++ ){
+					var temp = [];
+					temp.push( i );
+					rdata.push( temp );
+				}
+			}
+
+			for( var i=0; i<ghistPressed.length; i++ ){
+				var pressed = parseInt( ghistPressed[i] );
+
+				for( var j=0; j<pressed; j++ ){
+					var temp = [];
+					temp.push( i );
+					gdata.push( i );
+				}
+			}
+
+			for( var i=0; i<bhistPressed.length; i++ ){
+				var pressed = parseInt( bhistPressed[i] );
+
+				for( var j=0; j<pressed; j++ ){
+					var temp = [];
+					temp.push( i );
+					bdata.push( i );
+				}
+			}
+
+			results[0].RDATA = rdata;
+			results[0].GDATA = gdata;
+			results[0].BDATA = bdata;
+
 			resolve( {"history":results[0]} );
 		} )
 		.catch( function(err){
