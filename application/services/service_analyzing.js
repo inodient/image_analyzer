@@ -102,9 +102,9 @@ function countRGB( filePath, fileId ){
 					ghist[rgbObj.g]++;
 					bhist[rgbObj.b]++;
 
-					rData.push(rgbObj.r);
-					gData.push(rgbObj.g);
-					bData.push(rgbObj.b);
+					// rData.push(rgbObj.r);
+					// gData.push(rgbObj.g);
+					// bData.push(rgbObj.b);
 				}
 			}
 
